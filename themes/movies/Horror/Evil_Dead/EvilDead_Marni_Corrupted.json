@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Marni_Corrupted",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#07040a",
+  "foreground": "#a11884",
+  "cursor": "#e6ac00",
+  "colors": [
+    "#030205", "#a11884", "#e6ac00", "#1a0f26",
+    "#2e1b42", "#452863", "#5f388a", "#7c49b3",
+    "#7d0d65", "#b38600", "#11091c", "#470034",
+    "#ff5cd3", "#ffcc33", "#0e0814", "#ffffff"
+  ]
+}

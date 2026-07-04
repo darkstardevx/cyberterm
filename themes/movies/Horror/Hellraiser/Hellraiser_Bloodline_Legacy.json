@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Bloodline_Legacy",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0808",
+  "foreground": "#cca352",
+  "cursor": "#940000",
+  "colors": [
+    "#050404", "#940000", "#cca352", "#241c1c",
+    "#3b2e2e", "#544242", "#705858", "#8f7070",
+    "#730000", "#a37f39", "#141010", "#3d0000",
+    "#ff3333", "#ffd580", "#120e0e", "#ffffff"
+  ]
+}

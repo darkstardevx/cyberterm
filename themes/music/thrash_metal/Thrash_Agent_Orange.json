@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Agent_Orange",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0a0806",
+  "foreground": "#ff7700",
+  "cursor": "#5c6654",
+  "colors": [
+    "#050403", "#ff7700", "#5c6654", "#211a14",
+    "#382c22", "#524031", "#6e5642", "#8c6e54",
+    "#cc5f00", "#454d3f", "#14100d", "#4d2400",
+    "#ff9933", "#7c8a71", "#120e0b", "#ffffff"
+  ]
+}

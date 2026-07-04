@@ -1,0 +1,14 @@
+{
+  "name": "Carcass_Symphony_Sickness",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#070805",
+  "foreground": "#858c6e",
+  "cursor": "#ff5500",
+  "colors": [
+    "#030402", "#ff5500", "#858c6e", "#171c13",
+    "#262e1f", "#39452f", "#4d5c3f", "#637552",
+    "#cc4400", "#697056", "#10130d", "#4a1500",
+    "#ff8844", "#a6ad8f", "#0c0e0a", "#ffffff"
+  ]
+}

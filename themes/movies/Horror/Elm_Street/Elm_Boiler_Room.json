@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Boiler_Room",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0f0805",
+  "foreground": "#d9531e",
+  "cursor": "#ffcc00",
+  "colors": [
+    "#070402", "#d9531e", "#ffcc00", "#3a1f14",
+    "#543217", "#6e4221", "#8c532b", "#21140e",
+    "#b33c0d", "#cca300", "#732506", "#997a00",
+    "#ff733b", "#ffee55", "#170c07", "#ffffff"
+  ]
+}

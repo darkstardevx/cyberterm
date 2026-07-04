@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Charred_Flesh",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0908",
+  "foreground": "#a67c6c",
+  "cursor": "#e0115f",
+  "colors": [
+    "#050404", "#a67c6c", "#e0115f", "#241915",
+    "#3b2b25", "#543d35", "#705247", "#8f695b",
+    "#855d4e", "#b50e4c", "#141210", "#5c0524",
+    "#c49a8b", "#ff5493", "#12100e", "#ffffff"
+  ]
+}

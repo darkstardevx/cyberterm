@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Solar_Sailer",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#05090a",
+  "foreground": "#00ffaa",
+  "cursor": "#ffaa00",
+  "colors": [
+    "#020405", "#00ffaa", "#ffaa00", "#14262d",
+    "#213d47", "#315966", "#44788a", "#5a9cb3",
+    "#00cc88", "#cc8800", "#0d1c21", "#ff7700",
+    "#55ffcc", "#ffcc44", "#070e12", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Good_Guys_Box",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#ffcc00",
+  "foreground": "#002244",
+  "cursor": "#cc0000",
+  "colors": [
+    "#ffaa00", "#cc0000", "#004499", "#ffffff",
+    "#0088cc", "#e6a100", "#1a1100", "#473000",
+    "#aa0000", "#002266", "#e6b800", "#ffffff",
+    "#ff4d4d", "#3388ff", "#291f00", "#ffffff"
+  ]
+}

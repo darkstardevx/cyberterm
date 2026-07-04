@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Lightcycle_Blaze",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#040506",
+  "foreground": "#ff6c00",
+  "cursor": "#00f3ff",
+  "colors": [
+    "#020203", "#ff6c00", "#00f3ff", "#ff0055",
+    "#26262b", "#3d3d45", "#595963", "#a1a1b5",
+    "#cc5500", "#00a2cc", "#cc0044", "#ffaa44",
+    "#ff9d55", "#66f7ff", "#0a0c0e", "#ffffff"
+  ]
+}

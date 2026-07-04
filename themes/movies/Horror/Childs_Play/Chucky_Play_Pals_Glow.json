@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Play_Pals_Glow",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#040909",
+  "foreground": "#00ffcc",
+  "cursor": "#ffff00",
+  "colors": [
+    "#020404", "#00ffcc", "#ffff00", "#112626",
+    "#1d3d3d", "#2b5958", "#3c7876", "#4f9c9a",
+    "#00ccaa", "#cca300", "#070f0f", "#005241",
+    "#55ffd9", "#ffee55", "#091313", "#ffffff"
+  ]
+}

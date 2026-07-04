@@ -1,0 +1,13 @@
+{
+  "name": "Leatherface_Sewn_Stitches",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "background": "#0a0808",
+  "foreground": "#a6513c",
+  "cursor": "#940000",
+  "colors": [
+    "#040303", "#940000", "#a6513c", "#241c1c",
+    "#3b2e2e", "#544242", "#705858", "#8f7070",
+    "#730000", "#823e2e", "#141010", "#3d0000",
+    "#ff3333", "#c46c56", "#120e0e", "#ffffff"
+  ]
+}

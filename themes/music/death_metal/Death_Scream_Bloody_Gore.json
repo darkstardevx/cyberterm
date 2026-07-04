@@ -1,0 +1,14 @@
+{
+  "name": "Death_Scream_Bloody_Gore",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0a0404",
+  "foreground": "#d11515",
+  "cursor": "#39ff14",
+  "colors": [
+    "#050202", "#d11515", "#39ff14", "#240f0f",
+    "#3d1919", "#592424", "#783030", "#9c3e3e",
+    "#9e0e0e", "#29cc0d", "#140808", "#400000",
+    "#ff4d4d", "#7bf56e", "#120505", "#ffffff"
+  ]
+}

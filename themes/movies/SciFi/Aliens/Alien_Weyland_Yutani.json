@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Weyland_Yutani",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0c10",
+  "foreground": "#c5cbd3",
+  "cursor": "#ffcc00",
+  "colors": [
+    "#050608", "#ffcc00", "#c5cbd3", "#1f2229",
+    "#323742", "#495061", "#626b82", "#7e8aa6",
+    "#cca300", "#9ca2a8", "#12141a", "#524100",
+    "#ffee55", "#e6edf5", "#101114", "#ffffff"
+  ]
+}

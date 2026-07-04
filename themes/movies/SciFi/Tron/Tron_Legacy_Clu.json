@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Legacy_Clu",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#080705",
+  "foreground": "#ffcc00",
+  "cursor": "#ff5500",
+  "colors": [
+    "#040302", "#ffcc00", "#ff5500", "#ffea00",
+    "#1c1a17", "#302d26", "#4a463b", "#787160",
+    "#cca300", "#cc4400", "#ffee55", "#ffaa00",
+    "#ffe680", "#ff8844", "#12100b", "#ffffff"
+  ]
+}

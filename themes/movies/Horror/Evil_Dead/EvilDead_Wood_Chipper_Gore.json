@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Wood_Chipper_Gore",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050604",
+  "foreground": "#b80f0f",
+  "cursor": "#ff5500",
+  "colors": [
+    "#020302", "#b80f0f", "#ff5500", "#151c12",
+    "#24301f", "#35472e", "#49613f", "#5e7d51",
+    "#8c0505", "#cc4400", "#0e120d", "#400000",
+    "#ff4d4d", "#ff7733", "#0a0c09", "#ffffff"
+  ]
+}

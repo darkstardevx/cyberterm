@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Cabin_Carnage",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0705",
+  "foreground": "#d41111",
+  "cursor": "#e5a65d",
+  "colors": [
+    "#050302", "#d41111", "#593e2b", "#241810",
+    "#3b271b", "#543826", "#704a33", "#8f5f41",
+    "#940000", "#734e32", "#140e0a", "#4d0000",
+    "#ff4d4d", "#baa08a", "#120d09", "#ffffff"
+  ]
+}

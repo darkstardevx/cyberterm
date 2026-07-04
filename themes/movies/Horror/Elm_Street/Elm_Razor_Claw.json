@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Razor_Claw",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0e10",
+  "foreground": "#e6e8ea",
+  "cursor": "#ff0033",
+  "colors": [
+    "#060708", "#e6e8ea", "#ff0033", "#292e33",
+    "#454c54", "#636d78", "#8592a0", "#aab7c4",
+    "#b0b5bc", "#cc0029", "#1a1d21", "#780018",
+    "#ffffff", "#ff5577", "#121417", "#ffffff"
+  ]
+}

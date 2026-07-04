@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Never_Sleep",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#04050d",
+  "foreground": "#00bfff",
+  "cursor": "#fe019a",
+  "colors": [
+    "#020207", "#00bfff", "#fe019a", "#141733",
+    "#222854", "#343c7a", "#4a55a3", "#6373cf",
+    "#0088cc", "#cc017a", "#05091c", "#4d002b",
+    "#55c4ff", "#ff66cc", "#070914", "#ffffff"
+  ]
+}

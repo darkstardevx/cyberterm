@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Hive_Breathing",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#040505",
+  "foreground": "#425449",
+  "cursor": "#1df06e",
+  "colors": [
+    "#010202", "#1df06e", "#425449", "#151c18",
+    "#26332c", "#3a4d42", "#506b5c", "#688a77",
+    "#12a64a", "#2d3b33", "#0c100e", "#04421c",
+    "#6bf7a3", "#8cbfa1", "#080a0a", "#ffffff"
+  ]
+}

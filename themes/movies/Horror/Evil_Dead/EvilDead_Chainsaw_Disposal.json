@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Chainsaw_Disposal",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0b0d",
+  "foreground": "#a61212",
+  "cursor": "#7c848c",
+  "colors": [
+    "#040405", "#a61212", "#7c848c", "#1c1c24",
+    "#30303d", "#474759", "#61617a", "#7e7e9e",
+    "#800000", "#5c636a", "#121217", "#3d0000",
+    "#ff4d4d", "#a6b0ba", "#101014", "#ffffff"
+  ]
+}

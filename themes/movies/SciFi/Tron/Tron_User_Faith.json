@@ -1,0 +1,14 @@
+{
+  "name": "Tron_User_Faith",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#03080c",
+  "foreground": "#00ffcc",
+  "cursor": "#ffffff",
+  "colors": [
+    "#010406", "#00ffcc", "#ffffff", "#0088ff",
+    "#0e1f2b", "#1c3b52", "#2e5b7a", "#4582ab",
+    "#00cca3", "#d1f7ff", "#0066cc", "#00a8ff",
+    "#55ffd9", "#ffffff", "#06131c", "#ffffff"
+  ]
+}

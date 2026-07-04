@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_To_Tear_Your_Soul",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#030303",
+  "foreground": "#ffffff",
+  "cursor": "#b30000",
+  "colors": [
+    "#000000", "#b30000", "#d4af37", "#141414",
+    "#262626", "#3b3b3b", "#545454", "#707070",
+    "#800000", "#aa7c11", "#090909", "#400000",
+    "#ff3333", "#ffe875", "#000000", "#ffffff"
+  ]
+}

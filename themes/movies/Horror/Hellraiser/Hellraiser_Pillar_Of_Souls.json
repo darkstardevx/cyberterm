@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Pillar_Of_Souls",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#080605",
+  "foreground": "#b59f84",
+  "cursor": "#a81111",
+  "colors": [
+    "#040302", "#a81111", "#c49c3b", "#1c1613",
+    "#302620", "#47382f", "#5e4b3f", "#785f50",
+    "#7d0a0a", "#9c7929", "#120f0d", "#3d0000",
+    "#ff4545", "#e5b849", "#0f0c0a", "#ffffff"
+  ]
+}

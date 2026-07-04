@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Meat_Hook_Gore",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0a0c",
+  "foreground": "#b50e0e",
+  "cursor": "#858f99",
+  "colors": [
+    "#040405", "#b50e0e", "#858f99", "#1c1c24",
+    "#2e2e3b", "#434354", "#5b5b73", "#757594",
+    "#870707", "#646d75", "#111114", "#4d0000",
+    "#ff4d4d", "#abb6c2", "#101014", "#ffffff"
+  ]
+}

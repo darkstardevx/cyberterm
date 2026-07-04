@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Deadite_Stare",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0c0f",
+  "foreground": "#ffd700",
+  "cursor": "#cc1111",
+  "colors": [
+    "#040506", "#ffd700", "#cc1111", "#171a21",
+    "#272c38", "#3a4254", "#4f5a73", "#687694",
+    "#cca300", "#990000", "#101217", "#ffffff",
+    "#ffee55", "#ff4d4d", "#0d0e12", "#ffffff"
+  ]
+}

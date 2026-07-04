@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Bride_Leather",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050505",
+  "foreground": "#e0e0e0",
+  "cursor": "#9c27b0",
+  "colors": [
+    "#010101", "#e0e0e0", "#9c27b0", "#141414",
+    "#262626", "#3b3b3b", "#545454", "#707070",
+    "#b3b3b3", "#7b1fa2", "#0a0a0a", "#4a005c",
+    "#ffffff", "#d946ef", "#0d0d0d", "#ffffff"
+  ]
+}

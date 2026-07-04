@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Sea_Of_Simulation",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#030612",
+  "foreground": "#0077ff",
+  "cursor": "#00ffff",
+  "colors": [
+    "#010208", "#0077ff", "#00ffff", "#140d33",
+    "#221954", "#34277a", "#4a39a3", "#634dcf",
+    "#0055cc", "#00cccc", "#0a0d24", "#00a8ff",
+    "#5599ff", "#55ffff", "#05091c", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Elevator_Crush",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#08090a",
+  "foreground": "#9e0606",
+  "cursor": "#364147",
+  "colors": [
+    "#040405", "#9e0606", "#364147", "#171a1c",
+    "#262c30", "#394247", "#4f5b63", "#677782",
+    "#730000", "#21282c", "#111314", "#3d0000",
+    "#e62e2e", "#4f5f69", "#0f1112", "#ffffff"
+  ]
+}

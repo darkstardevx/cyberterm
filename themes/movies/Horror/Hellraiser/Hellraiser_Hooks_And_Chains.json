@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Hooks_And_Chains",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#08090a",
+  "foreground": "#8a9299",
+  "cursor": "#990000",
+  "colors": [
+    "#040405", "#990000", "#cfa13c", "#171a1c",
+    "#282d30", "#3b4347", "#515c61", "#69777d",
+    "#cc0000", "#b58724", "#111314", "#4d0000",
+    "#ff3333", "#ffd700", "#0f1112", "#ffffff"
+  ]
+}

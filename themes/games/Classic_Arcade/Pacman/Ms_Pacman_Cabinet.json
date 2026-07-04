@@ -1,0 +1,14 @@
+{
+  "name": "Ms_Pacman_Cabinet",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#050015",
+  "foreground": "#ff1493",
+  "cursor": "#ffff00",
+  "colors": [
+    "#02000a", "#ff1493", "#ffff00", "#00bfff",
+    "#ff8c00", "#4b0082", "#ffb8ff", "#2121ff",
+    "#1a0033", "#ff69b4", "#ffee00", "#00ffff",
+    "#ff5500", "#7a11cc", "#ffffff", "#0000ff"
+  ]
+}

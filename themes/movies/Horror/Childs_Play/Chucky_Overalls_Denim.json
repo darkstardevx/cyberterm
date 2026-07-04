@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Overalls_Denim",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b1626",
+  "foreground": "#e03131",
+  "cursor": "#f08c00",
+  "colors": [
+    "#050b12", "#e03131", "#f08c00", "#2f9e44",
+    "#1864ab", "#1971c2", "#102a45", "#0c1f33",
+    "#c92a2a", "#e67e22", "#2b8a3e", "#1c7ed6",
+    "#ff6b6b", "#ffd43b", "#08101c", "#ffffff"
+  ]
+}

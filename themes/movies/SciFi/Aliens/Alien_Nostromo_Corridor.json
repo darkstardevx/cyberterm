@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Nostromo_Corridor",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0d0e",
+  "foreground": "#788780",
+  "cursor": "#e6a100",
+  "colors": [
+    "#050607", "#e6a100", "#788780", "#1a1e21",
+    "#2b3236", "#3f494f", "#56636b", "#70808a",
+    "#b88100", "#54615b", "#111417", "#473200",
+    "#ffbe33", "#a3b3ac", "#0f1112", "#ffffff"
+  ]
+}

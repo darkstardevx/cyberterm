@@ -1,0 +1,14 @@
+{
+  "name": "Death_Symbolic_Horizon",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#05080c",
+  "foreground": "#00a8ff",
+  "cursor": "#ff9900",
+  "colors": [
+    "#020406", "#00a8ff", "#ff9900", "#141e2b",
+    "#24344d", "#364d70", "#4b6b96", "#628bbf",
+    "#0088cc", "#cc7a00", "#0e131a", "#00475e",
+    "#55c4ff", "#ffb84d", "#0a0f14", "#ffffff"
+  ]
+}

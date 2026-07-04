@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Friends_To_The_End",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#000000",
+  "foreground": "#cc0000",
+  "cursor": "#004499",
+  "colors": [
+    "#000000", "#cc0000", "#004499", "#ffff00",
+    "#222222", "#444444", "#888888", "#cccccc",
+    "#990000", "#002b66", "#b38f00", "#4d4d4d",
+    "#ff3333", "#3388ff", "#ffff55", "#ffffff"
+  ]
+}

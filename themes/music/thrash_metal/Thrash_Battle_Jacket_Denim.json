@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Battle_Jacket_Denim",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0c0e12",
+  "foreground": "#cbd5e1",
+  "cursor": "#e03131",
+  "colors": [
+    "#060709", "#cbd5e1", "#e03131", "#1e222b",
+    "#2f3542", "#434b5e", "#5a657d", "#73809e",
+    "#94a3b8", "#c92a2a", "#12141a", "#1a2436",
+    "#f1f5f9", "#ff6b6b", "#0f1114", "#ffffff"
+  ]
+}

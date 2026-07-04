@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Inky_Tactics",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#02080a",
+  "foreground": "#00ffff",
+  "cursor": "#ff0000",
+  "colors": [
+    "#010405", "#00ffff", "#008b8b", "#66ffff",
+    "#ffb852", "#2121ff", "#ffff00", "#333333",
+    "#33ffff", "#00aaaa", "#99ffff", "#ff9900",
+    "#0000ff", "#ffee00", "#05131a", "#ffffff"
+  ]
+}

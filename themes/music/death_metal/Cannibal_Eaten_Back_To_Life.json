@@ -1,0 +1,14 @@
+{
+  "name": "Cannibal_Eaten_Back_To_Life",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#050805",
+  "foreground": "#39ff14",
+  "cursor": "#cc0000",
+  "colors": [
+    "#020402", "#39ff14", "#cc0000", "#152415",
+    "#263d26", "#395c39", "#4e804e", "#64a664",
+    "#2ecc71", "#990000", "#0d140d", "#400000",
+    "#85ff00", "#ff4d4d", "#0a0f0a", "#ffffff"
+  ]
+}

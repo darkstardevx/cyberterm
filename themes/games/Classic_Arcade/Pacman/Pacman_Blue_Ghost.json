@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Blue_Ghost",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#030312",
+  "foreground": "#4d4dff",
+  "cursor": "#ffdeae",
+  "colors": [
+    "#010108", "#1111ff", "#4d4dff", "#ffdeae",
+    "#ff0000", "#ffff00", "#00ffff", "#1c1c1c",
+    "#0000cc", "#3333ff", "#8080ff", "#ffebb3",
+    "#cc0000", "#ffee00", "#00aaaa", "#ffffff"
+  ]
+}

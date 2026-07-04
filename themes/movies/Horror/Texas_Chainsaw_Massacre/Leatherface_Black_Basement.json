@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Black_Basement",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050505",
+  "foreground": "#a81111",
+  "cursor": "#4d4d4d",
+  "colors": [
+    "#010101", "#a81111", "#4d4d4d", "#141414",
+    "#262626", "#3b3b3b", "#545454", "#707070",
+    "#7d0a0a", "#333333", "#090909", "#400000",
+    "#ff4545", "#969696", "#0d0d0d", "#ffffff"
+  ]
+}

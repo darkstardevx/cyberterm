@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Acid_Vitals",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#040804",
+  "foreground": "#39ff14",
+  "cursor": "#ccff00",
+  "colors": [
+    "#020402", "#39ff14", "#ccff00", "#112111",
+    "#1f3d1f", "#305c30", "#448244", "#5baa5b",
+    "#26b312", "#99cc00", "#091209", "#204008",
+    "#66ff66", "#e1ff55", "#070e07", "#ffffff"
+  ]
+}

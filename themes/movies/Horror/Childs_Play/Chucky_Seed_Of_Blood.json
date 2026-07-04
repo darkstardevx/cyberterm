@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Seed_Of_Blood",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0303",
+  "foreground": "#b50e0e",
+  "cursor": "#2b8a3e",
+  "colors": [
+    "#040101", "#b50e0e", "#2b8a3e", "#210909",
+    "#3b1212", "#571d1d", "#752929", "#963939",
+    "#870707", "#20662e", "#140606", "#3d0000",
+    "#ff4d4d", "#40c057", "#120505", "#ffffff"
+  ]
+}

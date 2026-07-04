@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Sun_Bleached_Graveyard",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#14120f",
+  "foreground": "#a89b87",
+  "cursor": "#ff3300",
+  "colors": [
+    "#090807", "#ff3300", "#a89b87", "#26221c",
+    "#3d372d", "#574e40", "#736855", "#91836c",
+    "#cc2900", "#877b69", "#171512", "#540000",
+    "#ff6644", "#cfc5b4", "#14120f", "#ffffff"
+  ]
+}

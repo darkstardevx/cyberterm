@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Voodoo_Awakening",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#08040d",
+  "foreground": "#9c27b0",
+  "cursor": "#39ff14",
+  "colors": [
+    "#040207", "#9c27b0", "#39ff14", "#1a0d29",
+    "#2e1847", "#452569", "#5f348f", "#7c47bd",
+    "#7b1fa2", "#26cc0d", "#11091c", "#4d0066",
+    "#e040fb", "#7bf56e", "#0f0817", "#ffffff"
+  ]
+}

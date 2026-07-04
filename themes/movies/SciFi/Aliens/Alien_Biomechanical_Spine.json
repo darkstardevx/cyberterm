@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Biomechanical_Spine",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#09090b",
+  "foreground": "#b5b0a5",
+  "cursor": "#2e3b26",
+  "colors": [
+    "#040405", "#2e3b26", "#b5b0a5", "#19191f",
+    "#2c2c36", "#424252", "#5b5b70", "#777791",
+    "#1f291a", "#8c887f", "#121214", "#151f10",
+    "#5c734d", "#ded9cf", "#0f0f12", "#ffffff"
+  ]
+}

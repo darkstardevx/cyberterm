@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Toy_Factory",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0c10",
+  "foreground": "#c5cbd3",
+  "cursor": "#0088cc",
+  "colors": [
+    "#050608", "#0088cc", "#cc0000", "#1f2229",
+    "#323742", "#495061", "#626b82", "#7e8aa6",
+    "#006699", "#990000", "#12141a", "#003b5c",
+    "#33a8ff", "#ff3333", "#101114", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Rust_And_Bone",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0b09",
+  "foreground": "#e3dac9",
+  "cursor": "#bf5a2b",
+  "colors": [
+    "#050403", "#bf5a2b", "#e3dac9", "#211a14",
+    "#382c22", "#524031", "#6e5642", "#8c6e54",
+    "#9e4216", "#c2b69f", "#120f0c", "#401805",
+    "#ff7844", "#f7f2e8", "#120e0c", "#ffffff"
+  ]
+}

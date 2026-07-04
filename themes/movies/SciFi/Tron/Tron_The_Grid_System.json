@@ -1,0 +1,14 @@
+{
+  "name": "Tron_The_Grid_System",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#02040a",
+  "foreground": "#00f0ff",
+  "cursor": "#ff5500",
+  "colors": [
+    "#010205", "#00f0ff", "#ff5500", "#7000ff",
+    "#ffff00", "#222226", "#44444a", "#888894",
+    "#00a8ff", "#ff2a00", "#5500cc", "#ccaa00",
+    "#55ffff", "#ff9955", "#050a14", "#ffffff"
+  ]
+}

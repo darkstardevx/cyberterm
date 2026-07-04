@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Flesh_Bound",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0404",
+  "foreground": "#e62e2e",
+  "cursor": "#cca33d",
+  "colors": [
+    "#050202", "#e62e2e", "#cca33d", "#240f0f",
+    "#3d1919", "#592424", "#783030", "#9c3e3e",
+    "#a81616", "#a17e25", "#140808", "#4d0000",
+    "#ff6666", "#ffd700", "#120505", "#ffffff"
+  ]
+}

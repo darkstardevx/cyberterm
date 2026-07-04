@@ -1,0 +1,14 @@
+{
+  "name": "Ms_Pacman_Fruit_Bonus",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#080305",
+  "foreground": "#ff3366",
+  "cursor": "#ffcc00",
+  "colors": [
+    "#040102", "#ff3366", "#ffcc00", "#4caf50",
+    "#ff5722", "#9c27b0", "#00ffff", "#241016",
+    "#cc0033", "#ff9900", "#357a38", "#d03b0d",
+    "#6a0dad", "#33ffff", "#000000", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Head_Cheese",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0706",
+  "foreground": "#cf947c",
+  "cursor": "#a81616",
+  "colors": [
+    "#050303", "#a81616", "#cf947c", "#241815",
+    "#3b2823", "#543932", "#704d43", "#8f6256",
+    "#851111", "#b58069", "#140e0c", "#470505",
+    "#ff4d4d", "#e3baa8", "#120d0b", "#ffffff"
+  ]
+}

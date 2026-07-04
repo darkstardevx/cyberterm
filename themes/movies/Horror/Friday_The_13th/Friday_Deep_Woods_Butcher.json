@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Deep_Woods_Butcher",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#040605",
+  "foreground": "#a80000",
+  "cursor": "#2b3d26",
+  "colors": [
+    "#020302", "#a80000", "#2b3d26", "#111a10",
+    "#1d2b1a", "#293d25", "#385433", "#496e43",
+    "#7a0000", "#20301d", "#0c120e", "#3d0000",
+    "#ff3333", "#436139", "#090e0b", "#ffffff"
+  ]
+}

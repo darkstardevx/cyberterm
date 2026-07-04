@@ -1,0 +1,14 @@
+{
+  "name": "Alien_LV426_Atmosphere",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#05080d",
+  "foreground": "#607d8b",
+  "cursor": "#00e5ff",
+  "colors": [
+    "#020406", "#00e5ff", "#607d8b", "#141d2b",
+    "#24344d", "#364d70", "#4b6b96", "#628bbf",
+    "#00a2cc", "#455a64", "#0e131a", "#004754",
+    "#66f3ff", "#90a4ae", "#0a0f14", "#ffffff"
+  ]
+}

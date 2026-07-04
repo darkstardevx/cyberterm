@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Golden_Chime",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0a06",
+  "foreground": "#ffcc00",
+  "cursor": "#b30000",
+  "colors": [
+    "#060503", "#ffcc00", "#b30000", "#211a10",
+    "#382d1b", "#524128", "#705a37", "#917447",
+    "#cca300", "#e60000", "#17120b", "#4a0000",
+    "#ffee55", "#ff4d4d", "#120e09", "#ffffff"
+  ]
+}

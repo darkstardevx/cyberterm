@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Pretty_Woman_Mask",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0f0d0c",
+  "foreground": "#d9a78f",
+  "cursor": "#990011",
+  "colors": [
+    "#060505", "#990011", "#d9a78f", "#241d1a",
+    "#3b302a", "#54443c", "#705b51", "#8f7567",
+    "#cc001b", "#bf8b73", "#14100f", "#4d0005",
+    "#ff4d66", "#f2cfbe", "#12100e", "#ffffff"
+  ]
+}

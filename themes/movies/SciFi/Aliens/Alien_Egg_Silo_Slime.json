@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Egg_Silo_Slime",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#060907",
+  "foreground": "#508265",
+  "cursor": "#8be35d",
+  "colors": [
+    "#030403", "#8be35d", "#508265", "#162119",
+    "#283b2d", "#3d5945", "#567d61", "#71a37f",
+    "#67ab41", "#395c47", "#0f1411", "#2b4d14",
+    "#adff80", "#99cfad", "#0a0f0c", "#ffffff"
+  ]
+}

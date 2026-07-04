@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Identity_Disc",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#050508",
+  "foreground": "#ffffff",
+  "cursor": "#00e5ff",
+  "colors": [
+    "#020204", "#00e5ff", "#ffffff", "#0044ff",
+    "#1a1a24", "#333344", "#555566", "#aaaa88",
+    "#0088cc", "#d1f7ff", "#0022aa", "#33333b",
+    "#66f0ff", "#ffffff", "#0b0b12", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Drowned_In_Blood",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0c0512",
+  "foreground": "#ff0055",
+  "cursor": "#7b00a8",
+  "colors": [
+    "#060209", "#ff0055", "#4c1a57", "#1d0e26",
+    "#321840", "#49235e", "#643080", "#813ea3",
+    "#a30036", "#501d5c", "#14071f", "#5c001e",
+    "#ff4d88", "#b666cc", "#0f0617", "#ffffff"
+  ]
+}

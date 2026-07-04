@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Chestburster_Artery",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0404",
+  "foreground": "#cc1111",
+  "cursor": "#39ff14",
+  "colors": [
+    "#050202", "#cc1111", "#39ff14", "#240f0f",
+    "#3d1919", "#592424", "#783030", "#9c3e3e",
+    "#990000", "#26cc0d", "#140808", "#400000",
+    "#ff4d4d", "#7bf56e", "#120505", "#ffffff"
+  ]
+}

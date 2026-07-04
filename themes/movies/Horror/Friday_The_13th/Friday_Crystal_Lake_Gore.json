@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Crystal_Lake_Gore",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#020709",
+  "foreground": "#ff0011",
+  "cursor": "#ff0033",
+  "colors": [
+    "#010304", "#ff0011", "#0d3140", "#06151c",
+    "#132933", "#1b3d4d", "#26546a", "#326d8a",
+    "#8a0303", "#cc0000", "#470000", "#1c4a5e",
+    "#ff3344", "#ff6677", "#050f14", "#ffffff"
+  ]
+}

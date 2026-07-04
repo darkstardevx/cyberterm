@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Order_Of_The_Gash",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#08080a",
+  "foreground": "#e0e0e3",
+  "cursor": "#990011",
+  "colors": [
+    "#030304", "#990011", "#c5a059", "#17171c",
+    "#26262e", "#3a3a45", "#525261", "#6e6e80",
+    "#cc001b", "#aa8033", "#121214", "#4a0005",
+    "#ff4d66", "#d4af37", "#0d0d12", "#ffffff"
+  ]
+}

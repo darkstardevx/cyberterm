@@ -1,0 +1,14 @@
+{
+  "name": "Friday_The_Final_Chapter",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050505",
+  "foreground": "#b30000",
+  "cursor": "#7a7a7a",
+  "colors": [
+    "#020202", "#b30000", "#4d4d4d", "#141414",
+    "#262626", "#3b3b3b", "#545454", "#707070",
+    "#800000", "#333333", "#0a0a0a", "#ff1a1a",
+    "#ff4d4d", "#a6a6a6", "#121212", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Staff_Slaughter",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0806",
+  "foreground": "#bf2121",
+  "cursor": "#8c765c",
+  "colors": [
+    "#050403", "#bf2121", "#8c765c", "#211a14",
+    "#382c22", "#524031", "#6e5642", "#8c6e54",
+    "#941212", "#6e5a44", "#14100d", "#420404",
+    "#ff5252", "#baa388", "#120e0b", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Pleasure_To_Kill",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0d0502",
+  "foreground": "#e64500",
+  "cursor": "#8a1414",
+  "colors": [
+    "#060201", "#e64500", "#8a1414", "#240f05",
+    "#3d1b0a", "#592710", "#783616", "#9c481f",
+    "#b33600", "#5c0d0d", "#140703", "#520000",
+    "#ff6c33", "#b32424", "#120904", "#ffffff"
+  ]
+}

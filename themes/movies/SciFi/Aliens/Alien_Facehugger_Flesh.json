@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Facehugger_Flesh",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0908",
+  "foreground": "#c4a08f",
+  "cursor": "#8a1b1b",
+  "colors": [
+    "#060404", "#8a1b1b", "#c4a08f", "#241916",
+    "#3d2b25", "#593f37", "#78564a", "#9c7061",
+    "#5e1212", "#9e7f71", "#14100e", "#3b0808",
+    "#b33030", "#ebd2c7", "#120e0d", "#ffffff"
+  ]
+}

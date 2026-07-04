@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Rotting_Trophies",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#070805",
+  "foreground": "#858c6e",
+  "cursor": "#800000",
+  "colors": [
+    "#030402", "#800000", "#858c6e", "#171c13",
+    "#262e1f", "#39452f", "#4d5c3f", "#637552",
+    "#5e0000", "#697056", "#10130d", "#330000",
+    "#b30000", "#a6ad8f", "#0c0e0a", "#ffffff"
+  ]
+}

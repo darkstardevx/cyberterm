@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Chainsaw_Gasoline",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#080907",
+  "foreground": "#e6a100",
+  "cursor": "#b51212",
+  "colors": [
+    "#030403", "#b51212", "#e6a100", "#181c15",
+    "#272e22", "#3a4533", "#4e5c44", "#647557",
+    "#8a0707", "#b88100", "#0f120e", "#3d0000",
+    "#ff3333", "#ffbe33", "#0b0d0a", "#ffffff"
+  ]
+}

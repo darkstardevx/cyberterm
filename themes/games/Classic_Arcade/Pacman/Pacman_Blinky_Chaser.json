@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Blinky_Chaser",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#0a0202",
+  "foreground": "#ff0000",
+  "cursor": "#ffff00",
+  "colors": [
+    "#030101", "#ff0000", "#7a0000", "#ff5555",
+    "#2121ff", "#ffff00", "#dedede", "#333333",
+    "#ff3333", "#cc0000", "#ff6666", "#0000ff",
+    "#ffee00", "#ffffff", "#121212", "#ffb8ff"
+  ]
+}

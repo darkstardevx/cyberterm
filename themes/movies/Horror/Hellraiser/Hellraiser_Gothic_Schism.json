@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Gothic_Schism",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#07050a",
+  "foreground": "#a688b5",
+  "cursor": "#cc0033",
+  "colors": [
+    "#030205", "#cc0033", "#c29938", "#1a1326",
+    "#2c2040", "#41305c", "#59427d", "#7356a1",
+    "#990026", "#a17b25", "#110d1a", "#540011",
+    "#ff4d77", "#ffd700", "#0e0a14", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Giger_Necronom",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0d0f",
+  "foreground": "#9fa4a6",
+  "cursor": "#4b5320",
+  "colors": [
+    "#060608", "#4b5320", "#9fa4a6", "#1c1d21",
+    "#2e3036", "#44464f", "#5b5e69", "#757885",
+    "#333816", "#73787a", "#141417", "#22260f",
+    "#8b9467", "#cbd0d2", "#101012", "#ffffff"
+  ]
+}

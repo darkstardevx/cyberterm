@@ -1,0 +1,15 @@
+{
+  "name": "Elm_Springwood_Asphalt",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0c10",
+  "foreground": "#9aa0a6",
+  "cursor": "#d12323",
+  "colors": [
+    "#050608", "#9aa0a6", "#d12323", "#1f2229",
+    "#323742", "#495061", "#626b82", "#7e8aa6",
+    "#757b80", "#a81616", "#12141a", "#610b0b",
+    "#bd
+c2cf", "#ff4545", "#101114", "#ffffff"
+  ]
+}

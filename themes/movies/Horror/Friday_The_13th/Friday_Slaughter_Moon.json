@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Slaughter_Moon",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#06060c",
+  "foreground": "#ff3344",
+  "cursor": "#3366ff",
+  "colors": [
+    "#030306", "#ff3344", "#3366ff", "#131326",
+    "#212140", "#31315e", "#444482", "#5a5aab",
+    "#cc1122", "#1c3bb3", "#0f0f24", "#66000c",
+    "#ff7785", "#7799ff", "#0d0d1a", "#ffffff"
+  ]
+}

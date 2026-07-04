@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Blood_Geyser",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050101",
+  "foreground": "#800000",
+  "cursor": "#ff1a1a",
+  "colors": [
+    "#020000", "#800000", "#ff1a1a", "#330000",
+    "#4d0000", "#660000", "#990000", "#cc0000",
+    "#4a0000", "#cc0000", "#b30000", "#ff4d4d",
+    "#e60000", "#ff8080", "#120202", "#ffffff"
+  ]
+}

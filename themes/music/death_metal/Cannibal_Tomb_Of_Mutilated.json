@@ -1,0 +1,14 @@
+{
+  "name": "Cannibal_Tomb_Of_Mutilated",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0b0c10",
+  "foreground": "#8ba3b3",
+  "cursor": "#800000",
+  "colors": [
+    "#050608", "#800000", "#8ba3b3", "#1f2229",
+    "#323742", "#495061", "#626b82", "#7e8aa6",
+    "#5c0000", "#698191", "#12141a", "#3d0000",
+    "#b30000", "#c2d4e0", "#101114", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Recognizer_Patrol",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#060608",
+  "foreground": "#ff2a2a",
+  "cursor": "#00a8ff",
+  "colors": [
+    "#030304", "#ff2a2a", "#00a8ff", "#292933",
+    "#3d3d4d", "#545466", "#707085", "#9090a8",
+    "#cc2222", "#0088cc", "#1c1c24", "#005588",
+    "#ff6666", "#55c4ff", "#0d0d12", "#ffffff"
+  ]
+}

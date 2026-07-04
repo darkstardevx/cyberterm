@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Pamela_Vengeance",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#08090a",
+  "foreground": "#c41212",
+  "cursor": "#3e524d",
+  "colors": [
+    "#040405", "#c41212", "#3e524d", "#1b2120",
+    "#2b3432", "#3d4a47", "#52635f", "#69807a",
+    "#940000", "#374742", "#111417", "#4d0000",
+    "#ff4d4d", "#537067", "#101214", "#ffffff"
+  ]
+}

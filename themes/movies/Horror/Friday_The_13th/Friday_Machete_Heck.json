@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Machete_Heck",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0e10",
+  "foreground": "#8a0505",
+  "cursor": "#9ea8b5",
+  "colors": [
+    "#060708", "#8a0505", "#9ea8b5", "#212429",
+    "#373c45", "#505863", "#6c7785", "#8b9aa8",
+    "#cc0000", "#697482", "#131517", "#4d0000",
+    "#ff3333", "#bdc7d4", "#121417", "#ffffff"
+  ]
+}

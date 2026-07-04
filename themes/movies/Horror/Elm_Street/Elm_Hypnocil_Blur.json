@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Hypnocil_Blur",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050a0a",
+  "foreground": "#00ffcc",
+  "cursor": "#7b2cbf",
+  "colors": [
+    "#020505", "#00ffcc", "#7b2cbf", "#142626",
+    "#213d3d", "#315958", "#447876", "#5a9c9a",
+    "#00ccaa", "#601fa3", "#070f0f", "#3c1061",
+    "#55ffd9", "#a85eff", "#071212", "#ffffff"
+  ]
+}

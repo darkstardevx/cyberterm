@@ -1,0 +1,14 @@
+{
+  "name": "Death_Leprosy_Decay",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0d0908",
+  "foreground": "#c47a62",
+  "cursor": "#a81111",
+  "colors": [
+    "#060404", "#a81111", "#c47a62", "#241814",
+    "#3b2721", "#54382f", "#704a3f", "#8f5f51",
+    "#7d0a0a", "#9e5c46", "#14100e", "#3b0808",
+    "#ff4545", "#ebd1c7", "#12100e", "#ffffff"
+  ]
+}

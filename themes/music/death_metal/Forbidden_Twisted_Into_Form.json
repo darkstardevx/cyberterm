@@ -1,0 +1,14 @@
+{
+  "name": "Forbidden_Twisted_Into_Form",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#06050a",
+  "foreground": "#bc13fe",
+  "cursor": "#00f0ff",
+  "colors": [
+    "#030205", "#bc13fe", "#00f0ff", "#1a1529",
+    "#2e2447", "#453669", "#5f4b8f", "#7c62bd",
+    "#9900cc", "#00bfff", "#11091c", "#00475e",
+    "#d655ff", "#55ffff", "#0e0814", "#ffffff"
+  ]
+}

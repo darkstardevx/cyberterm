@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Prime_Time",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#08080c",
+  "foreground": "#ffff00",
+  "cursor": "#ea00d9",
+  "colors": [
+    "#040406", "#ffff00", "#ea00d9", "#1c1c2b",
+    "#2e2e47", "#454569", "#5f5f8f", "#7b7bb8",
+    "#cca300", "#b500a8", "#0f0f17", "#5c0055",
+    "#ffee55", "#f35588", "#121217", "#ffffff"
+  ]
+}

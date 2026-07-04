@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Bit_Binary",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#050705",
+  "foreground": "#39ff14",
+  "cursor": "#ff3333",
+  "colors": [
+    "#020402", "#39ff14", "#ff3333", "#172d17",
+    "#264a26", "#376b37", "#4d944d", "#66c266",
+    "#2ecc71", "#cc2222", "#0b140b", "#ff6666",
+    "#85ff00", "#ff7777", "#0a0e0a", "#ffffff"
+  ]
+}

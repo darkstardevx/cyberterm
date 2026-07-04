@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Master_Of_Puppets",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0a0705",
+  "foreground": "#d12323",
+  "cursor": "#ffcc00",
+  "colors": [
+    "#050302", "#d12323", "#ffcc00", "#261a11",
+    "#422e1e", "#5f432b", "#7d5939", "#9c6f47",
+    "#a81616", "#cca300", "#140e0a", "#540707",
+    "#ff4d4d", "#ffee55", "#120e09", "#ffffff"
+  ]
+}

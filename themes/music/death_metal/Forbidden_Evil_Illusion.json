@@ -1,0 +1,14 @@
+{
+  "name": "Forbidden_Evil_Illusion",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#080808",
+  "foreground": "#9c9c9c",
+  "cursor": "#b51212",
+  "colors": [
+    "#040404", "#b51212", "#9c9c9c", "#1c1c1c",
+    "#333333", "#4d4d4d", "#666666", "#808080",
+    "#8a0707", "#737373", "#0f0f0f", "#4d0000",
+    "#ff3333", "#cccccc", "#141414", "#ffffff"
+  ]
+}

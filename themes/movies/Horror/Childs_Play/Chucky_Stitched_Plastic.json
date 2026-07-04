@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Stitched_Plastic",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0f0d0c",
+  "foreground": "#d94141",
+  "cursor": "#704214",
+  "colors": [
+    "#060505", "#d94141", "#704214", "#241610",
+    "#3b251b", "#54382c", "#704c3d", "#8f6452",
+    "#a61e1e", "#54300c", "#14100e", "#4d0000",
+    "#ff6b6b", "#8c5623", "#120e0d", "#ffffff"
+  ]
+}

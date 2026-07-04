@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Cellar_Hatch",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050506",
+  "foreground": "#858f99",
+  "cursor": "#800000",
+  "colors": [
+    "#020203", "#800000", "#858f99", "#14141a",
+    "#24242e", "#373747", "#4d4d63", "#666682",
+    "#5c0000", "#5e6975", "#0d0d12", "#2e0000",
+    "#b30000", "#abb5c2", "#0a0a0d", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Xenomorph_Carapace",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050608",
+  "foreground": "#858e96",
+  "cursor": "#107840",
+  "colors": [
+    "#020304", "#107840", "#858e96", "#14161c",
+    "#22262e", "#333945", "#474f5e", "#5d677a",
+    "#0a4a27", "#616970", "#0e1014", "#112e1b",
+    "#39ff14", "#adb5bd", "#0a0c0e", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Tape_Trading_Ink",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#050505",
+  "foreground": "#d4d4d4",
+  "cursor": "#ff3333",
+  "colors": [
+    "#010101", "#d4d4d4", "#ff3333", "#141414",
+    "#262626", "#3b3b3b", "#545454", "#707070",
+    "#a6a6a6", "#cc2929", "#0a0a0a", "#1a1a1a",
+    "#ffffff", "#ff7777", "#0d0d0d", "#ffffff"
+  ]
+}

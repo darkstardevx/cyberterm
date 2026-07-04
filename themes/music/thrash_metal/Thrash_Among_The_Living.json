@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Among_The_Living",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#07040a",
+  "foreground": "#bc13fe",
+  "cursor": "#39ff14",
+  "colors": [
+    "#030205", "#bc13fe", "#39ff14", "#1a0f26",
+    "#2e1b42", "#452863", "#5f388a", "#7c49b3",
+    "#9900cc", "#26cc0d", "#11091c", "#470066",
+    "#d655ff", "#7bf56e", "#0e0814", "#ffffff"
+  ]
+}

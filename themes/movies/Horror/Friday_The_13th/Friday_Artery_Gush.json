@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Artery_Gush",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#030000",
+  "foreground": "#ff0022",
+  "cursor": "#80000a",
+  "colors": [
+    "#010000", "#ff0022", "#80000a", "#1f0003",
+    "#3d0007", "#5c000a", "#80000e", "#a30012",
+    "#cc001b", "#4a0005", "#0a0001", "#121212",
+    "#ff4d66", "#e60018", "#050000", "#ffffff"
+  ]
+}

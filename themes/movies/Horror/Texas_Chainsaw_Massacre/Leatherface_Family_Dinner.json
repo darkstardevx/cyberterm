@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Family_Dinner",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0b0806",
+  "foreground": "#bd3a15",
+  "cursor": "#cc9c3d",
+  "colors": [
+    "#050302", "#bd3a15", "#cc9c3d", "#211812",
+    "#38281e", "#523b2c", "#6e4f3b", "#8c654b",
+    "#962b0e", "#a37d32", "#140e0b", "#470d00",
+    "#ff633b", "#e0b663", "#120d09", "#ffffff"
+  ]
+}

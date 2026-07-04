@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Hockey_Mask_Splatter",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0a0d",
+  "foreground": "#d1cdb8",
+  "cursor": "#990000",
+  "colors": [
+    "#050506", "#990000", "#d1cdb8", "#1c1c24",
+    "#33323a", "#4d4b54", "#696773", "#878494",
+    "#7a0000", "#b39c7d", "#121217", "#4d0000",
+    "#ff1a1a", "#e8e5d3", "#101014", "#ffffff"
+  ]
+}

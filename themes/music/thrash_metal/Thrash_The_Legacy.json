@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_The_Legacy",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#05060a",
+  "foreground": "#00bfff",
+  "cursor": "#9d00ff",
+  "colors": [
+    "#020305", "#00bfff", "#9d00ff", "#121521",
+    "#1f2438", "#2f3654", "#424c75", "#58659c",
+    "#0099cc", "#7a00cc", "#090a12", "#00475e",
+    "#55c4ff", "#b555ff", "#070914", "#ffffff"
+  ]
+}

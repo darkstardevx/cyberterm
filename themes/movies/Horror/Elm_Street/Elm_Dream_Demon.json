@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Dream_Demon",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#07040a",
+  "foreground": "#bd00ff",
+  "cursor": "#ff0055",
+  "colors": [
+    "#030205", "#bd00ff", "#ff0055", "#251233",
+    "#3d1f54", "#59307a", "#7a43a3", "#9e59cf",
+    "#9900cc", "#cc0044", "#13091a", "#780028",
+    "##d655ff", "#ff5588", "#0e0712", "#ffffff"
+  ]
+}

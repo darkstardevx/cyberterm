@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Camp_Blood",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#080605",
+  "foreground": "#b51212",
+  "cursor": "#ff0000",
+  "colors": [
+    "#040302", "#b51212", "#42281d", "#1f1511",
+    "#33221a", "#4d3326", "#694634", "#875a43",
+    "#800000", "#633c2a", "#120e0c", "#3d0000",
+    "#ff3333", "#a87458", "#0f0c0a", "#ffffff"
+  ]
+}

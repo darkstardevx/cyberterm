@@ -1,0 +1,14 @@
+{
+  "name": "Tron_Grid_Bug_Glitch",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#08040a",
+  "foreground": "#bd00ff",
+  "cursor": "#39ff14",
+  "colors": [
+    "#040205", "#bd00ff", "#39ff14", "#251233",
+    "#3d1f54", "#59307a", "#7a43a3", "#9e59cf",
+    "#9900cc", "#2ecc71", "#13091a", "#00ff66",
+    "#d655ff", "#85ff00", "#0e0712", "#ffffff"
+  ]
+}

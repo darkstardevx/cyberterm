@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Bonded_By_Blood",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0a0404",
+  "foreground": "#ff1a1a",
+  "cursor": "#ffffff",
+  "colors": [
+    "#050202", "#ff1a1a", "#ffffff", "#210d0d",
+    "#3b1717", "#572222", "#752e2e", "#963b3b",
+    "#cc0000", "#e6e6e6", "#140808", "#4d0000",
+    "#ff5555", "#ffffff", "#120505", "#ffffff"
+  ]
+}

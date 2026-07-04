@@ -1,0 +1,14 @@
+{
+  "name": "Alien_Perfect_Organism",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#000000",
+  "foreground": "#22edc7",
+  "cursor": "#ffffff",
+  "colors": [
+    "#000000", "#22edc7", "#ffffff", "#1a1a1a",
+    "#333333", "#4d4d4d", "#666666", "#808080",
+    "#0abfbc", "#e6e6e6", "#0a0a0a", "#00473b",
+    "#66ffd9", "#ffffff", "#000000", "#ffffff"
+  ]
+}

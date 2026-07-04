@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Cenobite_Leather",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#040405",
+  "foreground": "#b8b8ba",
+  "cursor": "#b51212",
+  "colors": [
+    "#010102", "#b51212", "#c99e32", "#121217",
+    "#22222b", "#363642", "#4c4c5c", "#66667a",
+    "#e60000", "#ffd700", "#0b0b0f", "#4d0000",
+    "#ff4d4d", "#ffe680", "#08080a", "#ffffff"
+  ]
+}

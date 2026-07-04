@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Beneath_The_Remains",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#080808",
+  "foreground": "#ff5500",
+  "cursor": "#d4af37",
+  "colors": [
+    "#040404", "#ff5500", "#d4af37", "#1c1c1c",
+    "#333333", "#4d4d4d", "#666666", "#808080",
+    "#cc4400", "#aa7c11", "#0f0f0f", "#541b00",
+    "#ff8844", "#ffe875", "#141414", "#ffffff"
+  ]
+}

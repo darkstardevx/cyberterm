@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Leviathan_Labyrinth",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0a0b0d",
+  "foreground": "#a3a9b0",
+  "cursor": "#d4af37",
+  "colors": [
+    "#040506", "#d4af37", "#b30000", "#181b21",
+    "#292e38", "#3d4554", "#545f73", "#6e7c96",
+    "#b38f24", "#e60000", "#12141a", "#ffffff",
+    "#ffd700", "#ff4d4d", "#0f1114", "#ffffff"
+  ]
+}

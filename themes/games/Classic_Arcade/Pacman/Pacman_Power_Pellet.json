@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Power_Pellet",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#080808",
+  "foreground": "#ffdeae",
+  "cursor": "#ffff00",
+  "colors": [
+    "#040404", "#ffdeae", "#ffb852", "#2121ff",
+    "#ff0000", "#00ffff", "#ffb8ff", "#222222",
+    "#ffebd2", "#ffcc80", "#0000ff", "#ff3333",
+    "#66ffff", "#ff99ff", "#141414", "#ffffff"
+  ]
+}

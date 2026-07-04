@@ -1,0 +1,14 @@
+{
+  "name": "Tron_MCP_Overlord",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#0a0202",
+  "foreground": "#ff0033",
+  "cursor": "#ffaa00",
+  "colors": [
+    "#050101", "#ff0033", "#ffaa00", "#3a0000",
+    "#1f1f1f", "#333333", "#555555", "#888888",
+    "#cc0029", "#cc8800", "#660000", "#ff5500",
+    "#ff5577", "#ffcc66", "#140505", "#ffffff"
+  ]
+}

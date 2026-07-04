@@ -1,0 +1,14 @@
+{
+  "name": "Obituary_Slowly_We_Rot",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#050604",
+  "foreground": "#a6ff00",
+  "cursor": "#800000",
+  "colors": [
+    "#020302", "#a6ff00", "#800000", "#12170f",
+    "#20291a", "#2f3d27", "#405436", "#546e47",
+    "#85cc00", "#5c0000", "#0b0d09", "#2b4000",
+    "#bfff55", "#b30000", "#070806", "#ffffff"
+  ]
+}

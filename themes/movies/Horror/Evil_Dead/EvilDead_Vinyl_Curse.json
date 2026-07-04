@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Vinyl_Curse",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050505",
+  "foreground": "#9e846b",
+  "cursor": "#a81111",
+  "colors": [
+    "#010101", "#a81111", "#9e846b", "#141414",
+    "#262626", "#3b3b3b", "#545454", "#707070",
+    "#800000", "#806851", "#0a0a0a", "#ff3333",
+    "#ff4545", "#bfa993", "#0d0d0d", "#ffffff"
+  ]
+}

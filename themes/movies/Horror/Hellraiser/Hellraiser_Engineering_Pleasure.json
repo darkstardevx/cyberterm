@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Engineering_Pleasure",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050101",
+  "foreground": "#ff1a1a",
+  "cursor": "#d4af37",
+  "colors": [
+    "#020000", "#ff1a1a", "#d4af37", "#1f0003",
+    "#3d0007", "#5c000a", "#80000e", "#a30012",
+    "#cc0000", "#aa7c11", "#0a0001", "#4d0000",
+    "#ff4d66", "#ffe875", "#050000", "#ffffff"
+  ]
+}

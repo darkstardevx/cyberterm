@@ -1,0 +1,14 @@
+{
+  "name": "Ms_Pacman_Pink_Maze",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#000000",
+  "foreground": "#ff69b4",
+  "cursor": "#ffff00",
+  "colors": [
+    "#000000", "#ff69b4", "#ff00ff", "#00ffff",
+    "#ffb852", "#ffff00", "#dedede", "#333333",
+    "#ff1493", "#cc00cc", "#66ffff", "#ffaa00",
+    "#ffee00", "#ffffff", "#121212", "#ff0000"
+  ]
+}

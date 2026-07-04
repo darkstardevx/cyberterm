@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Violent_Restitution",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#0a0505",
+  "foreground": "#e60000",
+  "cursor": "#ccaa00",
+  "colors": [
+    "#050202", "#e60000", "#ccaa00", "#241010",
+    "#3d1919", "#592424", "#783030", "#9c3e3e",
+    "#b30000", "#a38800", "#140808", "#400000",
+    "#ff4d4d", "#ffee55", "#120505", "#ffffff"
+  ]
+}

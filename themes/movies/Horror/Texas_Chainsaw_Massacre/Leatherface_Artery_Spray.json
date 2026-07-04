@@ -1,0 +1,14 @@
+{
+  "name": "Leatherface_Artery_Spray",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#030000",
+  "foreground": "#ff001e",
+  "cursor": "#5c0007",
+  "colors": [
+    "#010000", "#ff001e", "#5c0007", "#1f0002",
+    "#3d0004", "#5c0007", "#800009", "#a3000c",
+    "#cc0018", "#3d0004", "#0a0000", "#121212",
+    "#ff4d62", "#e60015", "#050000", "#ffffff"
+  ]
+}

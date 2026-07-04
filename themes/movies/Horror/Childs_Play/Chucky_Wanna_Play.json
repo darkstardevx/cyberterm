@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Wanna_Play",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#04050d",
+  "foreground": "#ffcc00",
+  "cursor": "#e03131",
+  "colors": [
+    "#020207", "#ffcc00", "#e03131", "#12142b",
+    "#1f2447", "#2f3869", "#42508f", "#586cb8",
+    "#cca300", "#c92a2a", "#090a17", "#4d0000",
+    "#ffee55", "#ff6b6b", "#070914", "#ffffff"
+  ]
+}

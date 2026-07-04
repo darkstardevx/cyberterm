@@ -1,0 +1,14 @@
+{
+  "name": "Friday_Jason_Lives_Viscera",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#050605",
+  "foreground": "#e60000",
+  "cursor": "#4dff00",
+  "colors": [
+    "#020302", "#e60000", "#283821", "#0f140d",
+    "#1b2417", "#2a3824", "#3b4f33", "#4e6943",
+    "#990000", "#456134", "#0a0f0a", "#520000",
+    "#ff4d4d", "#6db048", "#0d120d", "#ffffff"
+  ]
+}

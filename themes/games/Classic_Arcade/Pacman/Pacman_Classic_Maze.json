@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Classic_Maze",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#000000",
+  "foreground": "#ffff00",
+  "cursor": "#2121ff",
+  "colors": [
+    "#000000", "#ff0000", "#ffb8ff", "#00ffff",
+    "#ffb852", "#2121ff", "#dedede", "#ffff00",
+    "#333333", "#ff3333", "#ff99ff", "#66ffff",
+    "#ffcc00", "#1111ff", "#ffffff", "#ffff33"
+  ]
+}

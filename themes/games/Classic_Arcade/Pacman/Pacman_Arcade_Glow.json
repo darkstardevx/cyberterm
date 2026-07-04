@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Arcade_Glow",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#07040d",
+  "foreground": "#ffff00",
+  "cursor": "#ff007f",
+  "colors": [
+    "#030206", "#2121ff", "#ff007f", "#ffff00",
+    "#00ffff", "#ffb852", "#ff0000", "#1a1326",
+    "#0000ff", "#ff0055", "#ffee00", "#33ffff",
+    "#ff9933", "#cc0000", "#090512", "#ffffff"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Hellraiser_Lament_Configuration",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#060402",
+  "foreground": "#d4af37",
+  "cursor": "#cc0000",
+  "colors": [
+    "#000000", "#d4af37", "#aa7c11", "#ffcc00",
+    "#8a0303", "#cc0000", "#1c140d", "#2e251c",
+    "#aa2222", "#ffd700", "#140e0a", "#540000",
+    "#ff4d4d", "#ffe875", "#0a0705", "#ffffff"
+  ]
+}

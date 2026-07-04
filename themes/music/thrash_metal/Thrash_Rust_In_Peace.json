@@ -1,0 +1,14 @@
+{
+  "name": "Thrash_Rust_In_Peace",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#030807",
+  "foreground": "#00ffcc",
+  "cursor": "#ffaa00",
+  "colors": [
+    "#010403", "#00ffcc", "#ffaa00", "#112621",
+    "#1e423a", "#2c6155", "#3c8272", "#4f9e8b",
+    "#00ccaa", "#cc8800", "#091412", "#005244",
+    "#55ffd9", "#ffcc44", "#061311", "#ffffff"
+  ]
+}

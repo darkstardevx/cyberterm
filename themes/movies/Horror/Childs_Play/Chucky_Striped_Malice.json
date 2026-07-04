@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Striped_Malice",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0d0d",
+  "foreground": "#ffffff",
+  "cursor": "#e03131",
+  "colors": [
+    "#000000", "#e03131", "#e67e22", "#2b8a3e",
+    "#1c7ed6", "#9c27b0", "#333333", "#555555",
+    "#c92a2a", "#d946ef", "#06b6d4", "#facc15",
+    "#ff6b6b", "#a855f7", "#171717", "#ffffff"
+  ]
+}

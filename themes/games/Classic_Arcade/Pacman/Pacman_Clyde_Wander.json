@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Clyde_Wander",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#0a0602",
+  "foreground": "#ffb852",
+  "cursor": "#2121ff",
+  "colors": [
+    "#050301", "#ffb852", "#b3741b", "#ffcc80",
+    "#00ffff", "#2121ff", "#ff0000", "#333333",
+    "#ffaa44", "#8c5100", "#ffe0b2", "#66ffff",
+    "#0000ff", "#ff3333", "#140d05", "#ffffff"
+  ]
+}

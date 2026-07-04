@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Rise_Apartment",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0f12",
+  "foreground": "#cf3434",
+  "cursor": "#5c6970",
+  "colors": [
+    "#060708", "#cf3434", "#5c6970", "#20252b",
+    "#343b45", "#4b5663", "#657385", "#8193a8",
+    "#9e1b1b", "#434e54", "#14161c", "#470505",
+    "#ff6666", "#7b8d96", "#101214", "#ffffff"
+  ]
+}

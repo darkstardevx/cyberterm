@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Freddy_Sweater",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0c0505",
+  "foreground": "#d12323",
+  "cursor": "#2b5937",
+  "colors": [
+    "#060202", "#d12323", "#2b5937", "#1a0b0b",
+    "#122617", "#4d1414", "#26402d", "#1a1c1a",
+    "#a81616", "#1c3d25", "#801111", "#132b1a",
+    "#ff4545", "#478c58", "#120505", "#ffffff"
+  ]
+}

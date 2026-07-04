@@ -1,0 +1,14 @@
+{
+  "name": "Elm_Nancy_Defiance",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0c0c",
+  "foreground": "#f7f0e9",
+  "cursor": "#ff3333",
+  "colors": [
+    "#060606", "#f7f0e9", "#ff3333", "#242121",
+    "#3b3636", "#544e4e", "#706969", "#8f8585",
+    "#ded3c8", "#cc2929", "#171414", "#7a1414",
+    "#ffffff", "#ff7777", "#121010", "#ffffff"
+  ]
+}

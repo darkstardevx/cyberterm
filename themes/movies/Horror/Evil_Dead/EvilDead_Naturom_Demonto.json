@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Naturom_Demonto",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#080605",
+  "foreground": "#9c2424",
+  "cursor": "#bf9b63",
+  "colors": [
+    "#030202", "#9c2424", "#bf9b63", "#241812",
+    "#3d291e", "#593c2c", "#78513b", "#9c6a4e",
+    "#731111", "#a37d46", "#140e0b", "#400404",
+    "#ff4545", "#dec299", "#120e0c", "#ffffff"
+  ]
+}

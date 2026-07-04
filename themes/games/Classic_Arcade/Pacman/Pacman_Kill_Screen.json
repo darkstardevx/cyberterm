@@ -1,0 +1,14 @@
+{
+  "name": "Pacman_Kill_Screen",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "neon",
+  "background": "#050505",
+  "foreground": "#39ff14",
+  "cursor": "#ff00ff",
+  "colors": [
+    "#020202", "#39ff14", "#ffff00", "#2121ff",
+    "#ff0000", "#00ffff", "#ffffff", "#262626",
+    "#00ff00", "#ffee00", "#0000ff", "#cc0000",
+    "#33ffff", "#ff00aa", "#141414", "#000000"
+  ]
+}

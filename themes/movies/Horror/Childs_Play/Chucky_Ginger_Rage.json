@@ -1,0 +1,14 @@
+{
+  "name": "Chucky_Ginger_Rage",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#0d0602",
+  "foreground": "#e65c00",
+  "cursor": "#1c7ed6",
+  "colors": [
+    "#050201", "#e65c00", "#1c7ed6", "#241003",
+    "#3d1c07", "#592a0c", "#783b12", "#9c4f1c",
+    "#cc4400", "#115da3", "#140703", "#5c1b00",
+    "#ff8533", "#4dabf7", "#120904", "#ffffff"
+  ]
+}

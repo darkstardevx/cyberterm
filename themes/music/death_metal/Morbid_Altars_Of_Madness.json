@@ -1,0 +1,14 @@
+{
+  "name": "Morbid_Altars_Of_Madness",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#050407",
+  "foreground": "#bd00ff",
+  "cursor": "#ffea00",
+  "colors": [
+    "#020204", "#bd00ff", "#ffea00", "#15101f",
+    "#241c36", "#372b52", "#4c3c70", "#644f94",
+    "#9900cc", "#ccbc00", "#0c0914", "#3d0052",
+    "#d655ff", "#ffff55", "#08060d", "#ffffff"
+  ]
+}

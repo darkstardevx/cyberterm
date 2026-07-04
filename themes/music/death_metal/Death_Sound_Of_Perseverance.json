@@ -1,0 +1,14 @@
+{
+  "name": "Death_Sound_Of_Perseverance",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "metal",
+  "background": "#070404",
+  "foreground": "#ff3300",
+  "cursor": "#bf9b63",
+  "colors": [
+    "#030202", "#ff3300", "#bf9b63", "#241412",
+    "#3d221e", "#59332c", "#78463c", "#9c5d50",
+    "#cc2900", "#a37d46", "#140808", "#540000",
+    "#ff6644", "#dec299", "#120505", "#ffffff"
+  ]
+}

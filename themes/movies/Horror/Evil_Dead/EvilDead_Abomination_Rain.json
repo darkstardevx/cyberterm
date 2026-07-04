@@ -1,0 +1,14 @@
+{
+  "name": "EvilDead_Abomination_Rain",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "horror",
+  "background": "#030000",
+  "foreground": "#ff0011",
+  "cursor": "#ff1a33",
+  "colors": [
+    "#010000", "#ff0011", "#ff1a33", "#240003",
+    "#470005", "#6b0008", "#94000b", "#bd000e",
+    "#e60012", "#470005", "#0a0001", "#141414",
+    "#ff4d5a", "#ff808b", "#050000", "#ffffff"
+  ]
+}
