@@ -1,0 +1,14 @@
+{
+  "name": "Reign In Blood",
+  "author": "Darkstar [darkstardevx@gmail.com]",
+  "category": "thrash_metal",
+  "background": "#050505",
+  "foreground": "#d1c7c7",
+  "cursor": "#800000",
+  "colors": [
+    "#111111", "#800000", "#4d4d4d", "#bfa100", 
+    "#1a2636", "#591616", "#2d3838", "#d1c7c7",
+    "#222222", "#b30000", "#737373", "#e6c300", 
+    "#2b3f59", "#8c2323", "#445454", "#ffffff"
+  ]
+}

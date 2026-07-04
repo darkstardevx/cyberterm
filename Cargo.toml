@@ -1,0 +1,19 @@
+[package]
+name = "cyberterm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# --- Core Terminal Engine & OS Primitives ---
+alacritty_terminal = "0.26.0"   # Core matrix layout state, history buffer, and models
+vte = "0.15.0"                  # Handles parsing state machine sequences
+winit = "0.29"                  # Cross-platform window surface manager
+wgpu = "22.0"                   # Modern low-overhead native GPU interface
+polling = "3.8"                 # Event loop listener monitoring PTY channels
+rustix-openpty = "0.2"          # Safe cross-platform Linux PTY utilities
+parking_lot = "0.12"            # Low-overhead synchronization mutex primitive
+
+# --- Configuration & Engine State Serialization ---
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+serde_json = "1.0.150"
