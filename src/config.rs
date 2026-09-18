@@ -1,40 +1,19 @@
 // src/config.rs
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct CyberConfig {
     pub theme: String,
-
     pub opacity: f32,
-    pub wallpaper: Option<String>,
-    pub font_profile: String,
-    pub keybindings: String,
-    pub vim_mode_enabled: bool,
-    pub syntax_highlighting: bool,
-
-    // --- Extensible Engine Track Layout Fields ---
-    pub syntax_extensions: Vec<String>,
-    pub macros: HashMap<String, String>,
 }
 
 impl Default for CyberConfig {
     fn default() -> Self {
-        let mut default_macros = HashMap::new();
-        default_macros.insert("Ctrl+F1".to_string(), "cargo run\n".to_string());
-
         Self {
             theme: "synthwave_84".to_string(),
             opacity: 0.90,
-            wallpaper: None,
-            font_profile: "JetBrainsMono-Regular.ttf".to_string(),
-            keybindings: "default".to_string(),
-            vim_mode_enabled: false,
-            syntax_highlighting: true,
-            syntax_extensions: vec!["rs".to_string(), "toml".to_string(), "lua".to_string()],
-            macros: default_macros,
         }
     }
 }
@@ -68,10 +47,8 @@ pub fn initialize_cyberterm_directories() -> Result<PathBuf, std::io::Error> {
     let home = std::env::var("HOME").unwrap_or_else(|_| ".".to_string());
     let config_dir = PathBuf::from(home).join(".config").join("cyberterm");
     let themes_dir = config_dir.join("themes");
-    let recorder_dir = config_dir.join("logs").join("headsup_recorder");
 
     fs::create_dir_all(&themes_dir)?;
-    fs::create_dir_all(&recorder_dir)?;
 
     let config_file = config_dir.join("cyber_config.toml");
     if !config_file.exists() {
