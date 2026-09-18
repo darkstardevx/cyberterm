@@ -1,42 +1,74 @@
+<p align="center"><img src="assets/brand/cyberterm-hero.svg" alt="cyberterm" width="100%"></p>
+
 # 📟 cyberterm
 
-> Core terminal emulator framework optimized for high-luminance diagnostic output and ultra-dark baseline profiles.
+[![CI](https://github.com/darkstardevx/cyberterm/actions/workflows/ci.yml/badge.svg)](https://github.com/darkstardevx/cyberterm/actions/workflows/ci.yml)
+[![Release](https://github.com/darkstardevx/cyberterm/actions/workflows/release.yml/badge.svg)](https://github.com/darkstardevx/cyberterm/actions/workflows/release.yml)
 
-`cyberterm` is a released, active environment component of the **Cybercore Systems Framework**. Built to maximize performance and execution tracking, it provides a bare-metal, low-latency rendering pipeline tailored for keyboard-driven navigation arrays, high-intensity terminal text outputs, and stark contrast rendering profiles.
+`Rust` · `wgpu` · `alacritty_terminal` · `glyphon`
 
----
+**A GPU-rendered terminal emulator.** Real PTY handling via
+`alacritty_terminal`, real glyph rendering via `glyphon` (cosmic-text +
+etagere on a wgpu pipeline), 12 built-in Kitty-format themes, and a
+in-terminal theme menu — no Electron, no bundled shell.
 
-## 🚀 Active Module Status
+**[darkstardevx.github.io/cyberterm](https://darkstardevx.github.io/cyberterm/)**
 
-This module is **[RELEASED & ACTIVE]**. Primary production engineering and development targets are tracked under the active `mainframe` deployment line.
-
-* **Target Binary Namespace:** `cyberterm`
-* **Primary Track:** `origin/mainframe`
-* **Underpinning Architecture:** Cybercore Systems Core Specification
-
-## ⚙️ Core Performance & Features
-
-* **Low-Latency Rendering:** High-speed terminal screen updates optimized to execute complex scripts and text floods with zero frame drops.
-* **Ultra-Dark Baseline Profile:** Locked to a pure `#000000` void backdrop to eliminate panel wash and maximize high-contrast grid readability.
-* **Advanced Window Hooks:** Built from the floor up to integrate flawlessly into keyboard-centric window managers and standalone shell frameworks.
-* **Integrated Key Arrays:** Direct, manual keyboard navigation overrides for window operations, styling toggles, and shell state freezes.
-
----
-
-## 🏗️ Installation & Branch Tracking
-
-To clone this repository and check out the main operational pipeline:
+## 📦 Install
 
 ```bash
-# Clone the repository
-git clone [https://github.com/darkstardevx/cyberterm.git](https://github.com/darkstardevx/cyberterm.git)
-cd cyberterm
-
-# Switch to the primary development pipeline
-git checkout mainframe
+curl -fsSL https://raw.githubusercontent.com/darkstardevx/cyberterm/main/install.sh | sh
 ```
 
-## 🚦 Quality Gate
+Downloads the latest release for your platform (Linux or macOS, x86_64
+or aarch64), verifies its SHA-256 checksum, and installs `cyberterm` to
+`~/.local/bin`. Linux needs the usual desktop GL/X11/Wayland libraries
+already present — nothing extra to install for the binary itself. Or
+build from source with `cargo build --release`.
+
+## 🚀 Commands
+
+```bash
+cyberterm                     # launch the terminal
+cyberterm +list-themes        # list every theme found in ~/.config/cyberterm/themes
+cyberterm +set-theme <name>   # switch theme and save it as the default
+cyberterm +edit-theme --create-theme <category> <folder> <name>
+cyberterm +edit-theme --view-theme <category> <folder> <name>
+cyberterm +edit-theme --remove-theme <category> <folder> <name>
+cyberterm +set-opacity --custom=0.85
+cyberterm +list-termkeys
+```
+
+12 curated Kitty-syntax themes ship built-in (`~/.config/cyberterm/themes/*.conf`)
+and load unmodified — anything pulled straight from
+[kovidgoyal/kitty-themes](https://github.com/kovidgoyal/kitty-themes) drops in
+next to them with zero conversion. `+edit-theme` writes your own custom
+themes as JSON under a `category/folder/` layout alongside the built-ins;
+the theme registry reads both shapes at startup. Press `Ctrl+Shift+T` in
+the terminal itself to open the same theme picker without leaving the
+session.
+
+## ⚙️ Rendering
+
+Text is drawn by `glyphon` (cosmic-text shaping + etagere glyph atlas) on
+a wgpu render pipeline; per-cell background color (selection highlights,
+`ls --color` entries, etc.) is a separate hand-rolled quad pass, since
+glyphon only rasterizes glyphs. Window opacity (`+set-opacity`) fades
+cell backgrounds only — text stays fully opaque, matching how
+Ghostty/Kitty/Alacritty do transparency.
+
+## 🗺 Known limitations
+
+- **Paste isn't wired up.** Copy (mouse selection, or an app inside the
+  terminal writing an OSC 52 clipboard-set sequence) works and goes to
+  the system clipboard. Reading the system clipboard back — a keybinding
+  paste, or an app's OSC 52 clipboard-*read* query — currently returns
+  empty. Worth knowing before you rely on it for a paste-heavy workflow.
+- No tabs, no split panes. One window, one PTY session.
+- No syntax highlighting inside the terminal buffer itself (that's a
+  shell/pager/editor concern, not a terminal emulator's).
+
+## 🚦 Quality gate
 
 ```bash
 ./scripts/release-gates quick   # fmt + check + clippy
@@ -62,4 +94,4 @@ THE SOFTWARE IS PROVIDED "AS-IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 All software components, tools, prefixes, and configurations under the "Cyber" prefix within this ecosystem are developed completely independently as open-source utilities for specialized terminal environments. They maintain absolutely no affiliation, partnership, endorsement, sponsorship, or commercial connection with any external corporate cybersecurity providers, training collectives, or federal defense contractors. Prior art is formally registered and maintained immutably via active domain publication.
 
-**Contact Matrix:** [cybercore.sh+cyberterm@gmail.com](mailto:cybercore.sh+cyberterm@gmail.com) // [darkstardevx.github.io](https://darkstardevx.github.io/)
+**Contact:** [cybercore.sh+cyberterm@gmail.com](mailto:cybercore.sh+cyberterm@gmail.com) // [darkstardevx.github.io](https://darkstardevx.github.io/)
