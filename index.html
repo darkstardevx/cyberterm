@@ -1,0 +1,338 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cyberterm — GPU-rendered terminal emulator</title>
+<meta name="description" content="Real PTY handling via alacritty_terminal, real glyph rendering via glyphon on wgpu. 12 built-in Kitty-format themes, live theme menu, no Electron.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICAKICA8ZGVmcz48L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIyOCIgZmlsbD0iIzA3MDkwYSIvPgogIDxwYXRoIGQ9Ik0gMjIuMCAzNy4xIEwgNTYuNCA2NC4wIEwgMjIuMCA5MC45IiBmaWxsPSJub25lIiBzdHJva2U9IiMzOWZmODgiIHN0cm9rZS13aWR0aD0iMTQuMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iNzAuNyIgeT0iODEuNiIgd2lkdGg9IjM4LjYiIGhlaWdodD0iMTIuNiIgcng9IjIuOSIgZmlsbD0iI2ZmM2RmMCIvPgo8L3N2Zz4=">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  :root {
+    --void: #07090a;
+    --panel: 16, 21, 19;
+    --line: #1f2b26;
+    --line2: #151c19;
+    --phosphor: #39ff88;
+    --magenta: #ff3df0;
+    --white: #eafff0;
+    --muted: #7c9c8c;
+    --dim: #37453f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  ::selection { background: rgba(57,255,136,.25); color: #fff; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(900px 500px at 90% -8%, rgba(57,255,136,.06), transparent 60%),
+      radial-gradient(700px 420px at 5% 100%, rgba(255,61,240,.06), transparent 60%),
+      var(--void);
+    background-attachment: fixed;
+    color: #cfe6d9;
+    font-family: 'Chakra Petch', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 24px; }
+  h1, h2, h3 { font-family: 'Chakra Petch', sans-serif; color: var(--white); margin: 0; font-weight: 700; text-wrap: balance; }
+  p { margin: 0; }
+  code { font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,.05); padding: 1px 5px; border-radius: 3px; font-size: .87em; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 40;
+    backdrop-filter: blur(12px);
+    background: rgba(7,9,10,.82);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand img { width: 26px; height: 26px; }
+  .brand span { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--white); font-size: 16px; letter-spacing: -.01em; }
+  .navlinks { display: flex; align-items: center; gap: 20px; }
+  .navlinks a.navlink { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--muted); text-decoration: none; font-weight: 500; }
+  .navlinks a.navlink:hover { color: var(--white); }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 13.5px;
+    text-decoration: none; cursor: pointer; border: 1px solid transparent;
+  }
+  .btn-primary { background: rgba(57,255,136,.15); border-color: var(--phosphor); color: #fff; }
+  .btn-primary:hover { background: rgba(57,255,136,.26); }
+  .btn-ghost { background: rgba(255,255,255,.03); border-color: var(--line); color: #cfe6d9; }
+  .btn-ghost:hover { border-color: #34433c; background: rgba(255,255,255,.06); }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .04em;
+    background: rgba(255,255,255,.03); border: 1px solid var(--line); color: #9cb8aa;
+  }
+  .pill.magenta { border-color: rgba(255,61,240,.4); color: var(--magenta); background: rgba(255,61,240,.06); }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ---------- panel ---------- */
+  .panel {
+    position: relative; border-radius: 12px; border: 1px solid var(--line);
+    background: linear-gradient(160deg, rgba(16,21,19,.92), rgba(7,9,10,.95));
+    box-shadow: 0 26px 60px -34px rgba(0,0,0,.85);
+  }
+  .panel-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--line2); }
+  .panel-id { display: flex; align-items: center; gap: 9px; }
+  .cursor-dot { width: 8px; height: 8px; border-radius: 2px; background: var(--phosphor); box-shadow: 0 0 0 3px rgba(57,255,136,.18); }
+  .panel-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .05em; color: var(--muted); text-transform: uppercase; }
+  .panel-body { padding: 18px 20px; }
+  .panel-body pre { margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12.6px; line-height: 1.8; color: #cfe6d9; white-space: pre; overflow-x: auto; }
+  .panel .t-muted { color: var(--muted); }
+  .panel .t-phosphor { color: var(--phosphor); }
+  .panel .t-magenta { color: var(--magenta); }
+  .panel .t-white { color: var(--white); font-weight: 600; }
+  .panel .t-dim { color: var(--dim); }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 56px 0 18px; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 46px; align-items: center; }
+  .hero h1 { font-size: 44px; line-height: 1.1; margin-bottom: 16px; letter-spacing: -.005em; }
+  .hero-sub { font-size: 16.5px; color: var(--muted); max-width: 48ch; margin-bottom: 24px; line-height: 1.65; font-family: 'JetBrains Mono', monospace; }
+  .hero-cta { display: flex; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+  .chevron-visual { display: flex; justify-content: center; align-items: center; gap: 24px; }
+  .chevron-visual svg { width: 100%; max-width: 240px; }
+
+  /* ---------- sections ---------- */
+  section.feature { padding: 46px 0 6px; }
+  .f-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--phosphor); margin-bottom: 10px; }
+  .f-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 48px; align-items: center; }
+  .f-grid.rev { grid-template-columns: 1.14fr .86fr; }
+  .f-grid.rev .f-copy { order: 2; } .f-grid.rev .f-vis { order: 1; }
+  .f-copy h2 { font-size: 25px; margin-bottom: 12px; }
+  .f-copy p { color: var(--muted); font-size: 14.8px; margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .f-copy p:last-child { margin-bottom: 0; }
+  .f-copy strong { color: var(--white); }
+  .kbd { display: inline-block; padding: 1px 7px; border: 1px solid var(--line); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--white); background: rgba(255,255,255,.03); }
+
+  .theme-swatches { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .swatch { width: 22px; height: 22px; border-radius: 5px; border: 1px solid rgba(255,255,255,.12); }
+
+  .seam { display: flex; align-items: center; gap: 8px; padding: 46px 0 0; }
+  .seam .line { flex: 1; height: 1px; background: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 16px); }
+  .seam .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--line); }
+
+  /* ---------- install ---------- */
+  .install { padding: 60px 0 54px; }
+  .install-head { text-align: center; max-width: 560px; margin: 0 auto 26px; }
+  .install-head h2 { font-size: 28px; margin-bottom: 10px; }
+  .install-head p { color: var(--muted); font-size: 14.5px; font-family: 'JetBrains Mono', monospace; }
+  .install-card { max-width: 640px; margin: 0 auto; }
+  .os-tabs { display: flex; gap: 6px; padding: 12px 14px 0; }
+  .os-tab { padding: 7px 14px; border-radius: 7px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--muted); background: transparent; border: 1px solid transparent; cursor: pointer; }
+  .os-tab.active { background: rgba(57,255,136,.12); border-color: var(--phosphor); color: #fff; }
+  .cmd-row { display: flex; align-items: center; gap: 10px; margin: 14px 16px 16px; padding: 12px 8px 12px 16px; background: rgba(0,0,0,.3); border: 1px solid var(--line2); border-radius: 8px; }
+  .cmd-row .prompt { color: var(--phosphor); font-family: 'JetBrains Mono', monospace; font-size: 13px; flex-shrink: 0; }
+  .cmd-row code { flex: 1; font-size: 12.6px; background: none; padding: 0; overflow-x: auto; white-space: nowrap; }
+  .copy-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 7px; border: 1px solid var(--line2); background: rgba(255,255,255,.03); color: var(--muted); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .copy-btn:hover { border-color: var(--line); color: #fff; }
+  .copy-btn.copied { color: var(--phosphor); border-color: var(--phosphor); }
+  .install-note { font-size: 11.5px; color: var(--dim); padding: 0 16px 14px; text-align: center; font-family: 'JetBrains Mono', monospace; }
+  .dl-count { text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); margin-top: 14px; }
+  .install-more { text-align: center; margin-top: 14px; }
+  .install-more a { font-size: 12.5px; color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--line); font-family: 'JetBrains Mono', monospace; }
+  .install-more a:hover { color: var(--phosphor); border-color: var(--phosphor); }
+  .limitations { max-width: 640px; margin: 26px auto 0; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 10px; }
+  .limitations p { font-size: 12.5px; color: var(--muted); font-family: 'JetBrains Mono', monospace; line-height: 1.7; }
+  .limitations strong { color: var(--white); }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; margin-top: 20px; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .foot-brand { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+  .foot-brand img { width: 18px; height: 18px; }
+  .foot-links { display: flex; gap: 16px; }
+  .foot-links a { font-size: 12px; color: var(--muted); text-decoration: none; font-weight: 500; font-family: 'JetBrains Mono', monospace; }
+  .foot-links a:hover { color: #fff; }
+  .foot-family { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .06em; color: #263029; text-transform: uppercase; }
+
+  @media (max-width: 860px) {
+    .hero-grid, .f-grid, .f-grid.rev { grid-template-columns: 1fr; gap: 28px; }
+    .f-grid.rev .f-copy, .f-grid.rev .f-vis { order: initial; }
+    .hero h1 { font-size: 32px; }
+    .navlinks .navlink { display: none; }
+  }
+</style>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICAKICA8ZGVmcz48L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIyOCIgZmlsbD0iIzA3MDkwYSIvPgogIDxwYXRoIGQ9Ik0gMjIuMCAzNy4xIEwgNTYuNCA2NC4wIEwgMjIuMCA5MC45IiBmaWxsPSJub25lIiBzdHJva2U9IiMzOWZmODgiIHN0cm9rZS13aWR0aD0iMTQuMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iNzAuNyIgeT0iODEuNiIgd2lkdGg9IjM4LjYiIGhlaWdodD0iMTIuNiIgcng9IjIuOSIgZmlsbD0iI2ZmM2RmMCIvPgo8L3N2Zz4=" alt="">
+      <span>CYBERTERM</span>
+    </a>
+    <div class="navlinks">
+      <a class="navlink" href="#render">Rendering</a>
+      <a class="navlink" href="#themes">Themes</a>
+      <a class="navlink" href="#install">Install</a>
+      <a class="navlink btn btn-ghost" style="padding:7px 15px;font-size:12.5px;" href="https://github.com/darkstardevx/cyberterm" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill-row" style="margin-bottom:18px;">
+        <span class="pill">Rust</span>
+        <span class="pill magenta">wgpu</span>
+        <span class="pill magenta">glyphon</span>
+        <span class="pill">alacritty_terminal</span>
+      </div>
+      <h1>A terminal, GPU-rendered.</h1>
+      <p class="hero-sub">Real PTY handling via alacritty_terminal, real glyph rendering via glyphon (cosmic-text + etagere on a wgpu pipeline). 12 built-in Kitty-format themes, a live in-terminal theme menu — no Electron, no bundled shell.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#install">Install cyberterm</a>
+        <a class="btn btn-ghost" href="#themes">Browse themes →</a>
+      </div>
+    </div>
+    <div class="chevron-visual">
+      <svg viewBox="0 0 240 300">
+        <path d="M 40 90 L 160 150 L 40 210" fill="none" stroke="#39ff88" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="180" y="196" width="90" height="26" rx="6" fill="#ff3df0" transform="translate(-40 0)"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="wrap"><div class="seam"><span class="dot"></span><div class="line"></div><span class="dot"></span></div></div>
+
+<section class="feature" id="render">
+  <div class="wrap f-grid">
+    <div class="f-copy">
+      <div class="f-kicker">GPU rendering</div>
+      <h2>Glyphs on the GPU.<br>Backgrounds on the GPU.</h2>
+      <p>Text is drawn by <strong>glyphon</strong> (cosmic-text shaping + etagere glyph atlas) on a wgpu render pipeline. Per-cell background color — selection highlights, an <code>ls --color</code> entry — is a separate hand-rolled quad pass, since glyphon only rasterizes glyphs.</p>
+      <p>Window opacity fades cell backgrounds only; text stays fully opaque, matching how Ghostty/Kitty/Alacritty do transparency.</p>
+    </div>
+    <div class="panel f-vis">
+      <div class="panel-bar"><div class="panel-id"><span class="cursor-dot"></span><span class="panel-label">cyberterm</span></div><span class="panel-label">opacity</span></div>
+      <div class="panel-body">
+        <pre><span class="t-dim">$</span> <span class="t-white">cyberterm +set-opacity --custom=0.85</span>
+
+<span class="t-phosphor">window opacity saved: 0.85</span>
+<span class="t-muted">cell backgrounds fade, text stays opaque</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="seam"><span class="dot"></span><div class="line"></div><span class="dot"></span></div></div>
+
+<section class="feature" id="themes">
+  <div class="wrap f-grid rev">
+    <div class="f-copy">
+      <div class="f-kicker">Real Kitty theme syntax</div>
+      <h2>12 built-in themes.<br>Any kitty-themes file drops in.</h2>
+      <p>Built-in themes are genuine Kitty <code>.conf</code> syntax — flat, space-separated <code>key value</code> lines. Anything pulled straight from <a href="https://github.com/kovidgoyal/kitty-themes" target="_blank" rel="noopener">kovidgoyal/kitty-themes</a> works unmodified, no conversion.</p>
+      <p>Press <span class="kbd">Ctrl+Shift+T</span> in the terminal to open the theme menu live — switch and preview without restarting.</p>
+      <div class="theme-swatches">
+        <div class="swatch" style="background:#261a30"></div>
+        <div class="swatch" style="background:#1e1f29"></div>
+        <div class="swatch" style="background:#000000"></div>
+        <div class="swatch" style="background:#1a1e24"></div>
+        <div class="swatch" style="background:#111111"></div>
+        <div class="swatch" style="background:#16161e"></div>
+        <div class="swatch" style="background:#180a2b"></div>
+        <div class="swatch" style="background:#002b36"></div>
+      </div>
+    </div>
+    <div class="panel f-vis">
+      <div class="panel-bar"><div class="panel-id"><span class="cursor-dot"></span><span class="panel-label">cyberterm +list-themes</span></div><span class="panel-label">themes</span></div>
+      <div class="panel-body">
+        <pre><span class="t-dim">$</span> <span class="t-white">cyberterm +list-themes</span>
+
+<span class="t-phosphor">synthwave_84</span>     <span class="t-muted">dracula_cyber</span>   <span class="t-magenta">vaporwave_85</span>
+<span class="t-muted">tokyo_grid</span>       <span class="t-phosphor">gruvbox_cyber</span>   <span class="t-muted">nord_neon</span>
+<span class="t-magenta">cyberpunk_2077</span>   <span class="t-muted">darcula_glow</span>    <span class="t-phosphor">toxic_waste</span>
+
+<span class="t-dim">$</span> <span class="t-white">cyberterm +set-theme vaporwave_85</span>
+<span class="t-phosphor">saved as default theme</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="install" id="install">
+  <div class="wrap">
+    <div class="install-head">
+      <h2>Get cyberterm running</h2>
+      <p>One command — downloads, verifies the checksum, installs to <code>~/.local/bin</code>.</p>
+    </div>
+    <div class="panel install-card">
+      <div class="os-tabs" role="tablist">
+        <button class="os-tab active" data-os="linux" onclick="ctSetOs('linux')">Linux</button>
+        <button class="os-tab" data-os="macos" onclick="ctSetOs('macos')">macOS</button>
+      </div>
+      <div class="cmd-row">
+        <span class="prompt">&gt;_</span>
+        <code id="ct-cmd" class="mono">curl -fsSL https://raw.githubusercontent.com/darkstardevx/cyberterm/main/install.sh | sh</code>
+        <button class="copy-btn" onclick="ctCopy(this)" aria-label="Copy command">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+      </div>
+      <p class="install-note">Installs <code>cyberterm</code>. Linux needs the usual desktop GL/X11/Wayland libraries already present.</p>
+    </div>
+    <p class="dl-count" id="dl-count">&hellip;</p>
+    <div class="install-more">
+      <a href="https://github.com/darkstardevx/cyberterm#-commands" target="_blank" rel="noopener">More install options &amp; manual builds →</a>
+    </div>
+    <div class="limitations">
+      <p><strong>Known limitation:</strong> paste isn't wired up yet. Copy (selection, or an app's OSC 52 clipboard-set) works and goes to the system clipboard. Reading the clipboard back currently returns empty. No tabs or split panes — one window, one PTY session.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="foot-brand">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICAKICA8ZGVmcz48L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHJ4PSIyOCIgZmlsbD0iIzA3MDkwYSIvPgogIDxwYXRoIGQ9Ik0gMjIuMCAzNy4xIEwgNTYuNCA2NC4wIEwgMjIuMCA5MC45IiBmaWxsPSJub25lIiBzdHJva2U9IiMzOWZmODgiIHN0cm9rZS13aWR0aD0iMTQuMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iNzAuNyIgeT0iODEuNiIgd2lkdGg9IjM4LjYiIGhlaWdodD0iMTIuNiIgcng9IjIuOSIgZmlsbD0iI2ZmM2RmMCIvPgo8L3N2Zz4=" alt="">
+      <span>cyberterm &middot; MIT licensed</span>
+    </div>
+    <div class="foot-links">
+      <a href="https://github.com/darkstardevx/cyberterm" target="_blank" rel="noopener">GitHub</a>
+      <a href="#install">Install</a>
+    </div>
+    <div class="foot-family">Cybercore family</div>
+  </div>
+</footer>
+
+<script>
+  const CMDS = {
+    linux: 'curl -fsSL https://raw.githubusercontent.com/darkstardevx/cyberterm/main/install.sh | sh',
+    macos: 'curl -fsSL https://raw.githubusercontent.com/darkstardevx/cyberterm/main/install.sh | sh'
+  };
+  function ctSetOs(os) {
+    document.querySelectorAll('.os-tab').forEach(t => t.classList.toggle('active', t.dataset.os === os));
+    document.getElementById('ct-cmd').textContent = CMDS[os];
+  }
+  function ctCopy(btn) {
+    const text = document.getElementById('ct-cmd').textContent;
+    navigator.clipboard?.writeText(text).then(() => {
+      btn.classList.add('copied');
+      setTimeout(() => btn.classList.remove('copied'), 1400);
+    }).catch(() => {});
+  }
+  try { if (/Mac OS X|Macintosh/.test(navigator.userAgent)) ctSetOs('macos'); } catch (e) {}
+
+  fetch('https://api.github.com/repos/darkstardevx/cyberterm/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(rel => {
+      const dl = (rel.assets || [])
+        .filter(a => !a.name.endsWith('.sha256'))
+        .reduce((sum, a) => sum + (a.download_count || 0), 0);
+      document.getElementById('dl-count').textContent = dl.toLocaleString() + ' downloads (' + rel.tag_name + ')';
+    })
+    .catch(() => { document.getElementById('dl-count').textContent = ''; });
+</script>
