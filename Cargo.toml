@@ -5,15 +5,18 @@ edition = "2021"
 
 [dependencies]
 # --- Core Terminal Engine & OS Primitives ---
-alacritty_terminal = "0.26.0"   # Core matrix layout state, history buffer, and models
-vte = "0.15.0"                  # Handles parsing state machine sequences
+alacritty_terminal = "0.26.0"   # Core matrix layout state, history buffer, and models --
+                                 # also provides the real tty::new (PTY alloc + shell fork/exec)
+                                 # and event_loop::EventLoop (PTY read -> vte -> Term wiring)
+                                 # this project now uses directly instead of hand-rolling.
 winit = "0.30.13"               # Cross-platform window surface manager
 # futures is required to cleanly execute wgpu's async initialization methods
 futures = "0.3"
 wgpu = "24.0.0"                 # Modern low-overhead native GPU interface
-polling = "3.8"                 # Event loop listener monitoring PTY channels
-rustix-openpty = "0.2"          # Safe cross-platform Linux PTY utilities
+glyphon = "0.8"                 # Real GPU text rendering (cosmic-text + etagere), wgpu ^24 --
+                                 # verified against crates.io before pinning, matches wgpu above
 parking_lot = "0.12"            # Low-overhead synchronization mutex primitive
+arboard = "3"                   # Clipboard access (moved in from the removed pty_engine crate)
 
 # --- Configuration & Engine State Serialization ---
 serde = { version = "1.0", features = ["derive"] }

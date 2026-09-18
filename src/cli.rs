@@ -50,7 +50,7 @@ pub fn handle_arguments(
                                             if file_path.is_file()
                                                 && file_path
                                                     .extension()
-                                                    .map_or(false, |e| e == "json")
+                                                    .is_some_and(|e| e == "json")
                                             {
                                                 let variant_name = file_path
                                                     .file_stem()
@@ -73,27 +73,41 @@ pub fn handle_arguments(
         }
 
         "+set-theme" => {
-            if let (Some(cat), Some(folder), Some(variant)) =
-                (args.get(2), args.get(3), args.get(4))
-            {
-                println!(
-                    "🎨 Setting active workspace engine color profile to: {} -> {} -> {}",
-                    cat, folder, variant
-                );
+            // Real Kitty-format themes: one flat `<name>.conf` file per
+            // theme in the themes dir (the 12 built-ins, plus anything
+            // dropped in straight from kovidgoyal/kitty-themes). Matches
+            // `theme::ThemeRegistry`'s actual loader, not the old
+            // category/folder/variant JSON hierarchy this command used to
+            // target (which the registry no longer scans).
+            let themes_dir = config_root.join("themes");
+            let registry = crate::theme::ThemeRegistry::load_from_dir(&themes_dir);
 
-                current_config.theme_category = cat.clone();
-                current_config.theme_folder = folder.clone();
-                current_config.theme_variant = variant.clone();
-
-                // Write out the configuration state change back to disk
-                if crate::config::save_config(config_root, &current_config).is_ok() {
-                    println!("✨ Saved theme target to config template successfully.");
-                } else {
-                    eprintln!("❌ Error updating global configuration layout.");
+            let print_available = || {
+                println!("🎨 Available themes:");
+                for theme in &registry.themes {
+                    println!("  {}", theme.name);
                 }
-            } else {
-                eprintln!("❌ Error: Missing hierarchy tokens.");
-                eprintln!("   Usage: cyberterm +set-theme <category> <folder> <variant_name>");
+            };
+
+            match args.get(2) {
+                Some(name) if registry.themes.iter().any(|t| &t.name == name) => {
+                    println!("🎨 Setting active theme to: {}", name);
+                    current_config.theme = name.clone();
+                    if crate::config::save_config(config_root, &current_config).is_ok() {
+                        println!("✨ Saved theme selection to config.");
+                    } else {
+                        eprintln!("❌ Error updating configuration.");
+                    }
+                }
+                Some(name) => {
+                    eprintln!("❌ Error: No theme named '{}' found.", name);
+                    print_available();
+                }
+                None => {
+                    eprintln!("❌ Error: Missing theme name.");
+                    eprintln!("   Usage: cyberterm +set-theme <name>");
+                    print_available();
+                }
             }
             CliAction::ExitCleanly
         }

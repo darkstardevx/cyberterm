@@ -36,11 +36,21 @@ cd cyberterm
 git checkout mainframe
 ```
 
+## 🚦 Quality Gate
+
+```bash
+./scripts/release-gates quick   # fmt + check + clippy
+./scripts/release-gates full    # quick + tests + strict rustdoc
+```
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for what each step checks and why
+the render/PTY/input path can't be covered by automated tests.
+
 ## ⚖️ Namespace & Legal Attribution
 
-This project is an independent component of the **Cybercore Systems Framework** hosted canonically at [subgridsec.org](https://www.google.com/search?q=https://subgridsec.org).
+This project is an independent component of the **Cybercore Systems Framework** hosted canonically at [darkstardevx.github.io](https://darkstardevx.github.io/).
 
-**Copyright (c) 2026 Cybercore Tech (subgridsec.org)**
+**Copyright (c) 2026 Cybercore Tech (darkstardevx.github.io)**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -52,4 +62,4 @@ THE SOFTWARE IS PROVIDED "AS-IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 All software components, tools, prefixes, and configurations under the "Cyber" prefix within this ecosystem are developed completely independently as open-source utilities for specialized terminal environments. They maintain absolutely no affiliation, partnership, endorsement, sponsorship, or commercial connection with any external corporate cybersecurity providers, training collectives, or federal defense contractors. Prior art is formally registered and maintained immutably via active domain publication.
 
-**Contact Matrix:** [cybercore.sh+cyberterm@gmail.com](https://www.google.com/search?q=mailto%3Acybercore.sh%2Bcyberterm%40gmail.com) // [subgridsec.org](https://www.google.com/search?q=https://subgridsec.org)
+**Contact Matrix:** [cybercore.sh+cyberterm@gmail.com](mailto:cybercore.sh+cyberterm@gmail.com) // [darkstardevx.github.io](https://darkstardevx.github.io/)

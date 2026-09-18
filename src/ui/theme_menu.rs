@@ -1,85 +1,96 @@
 // src/ui/theme_menu.rs
 use crate::theme::ThemeRegistry;
 
-/// Renders the complete standalone terminal-native theme configuration HUD
-pub fn draw(registry: &ThemeRegistry, is_creating: bool, input_buffer: &str) {
-    // Clear viewport and home the cursor position
-    print!("\x1B[H\x1B[2J"); 
-    
-    println!("┌──────────────────────────────────────────────────────────────────────────────┐");
-    println!("│ 🌐 CYBERTERM THEME CONTROL MATRIX v0.55                                     │");
-    println!("├──────────────────────────────────────────────┬───────────────────────────────┤");
+/// One colored run of text within a menu line.
+pub struct Span {
+    pub text: String,
+    pub color: [u8; 3],
+}
 
-    // Guard against empty directory scans to prevent array indexing panics
+impl Span {
+    fn new(text: impl Into<String>, color: [u8; 3]) -> Self {
+        Self {
+            text: text.into(),
+            color,
+        }
+    }
+}
+
+const TEXT: [u8; 3] = [0xc0, 0xc8, 0xd8];
+const DIM: [u8; 3] = [0x60, 0x68, 0x78];
+const ACCENT: [u8; 3] = [0x30, 0xf0, 0xf0];
+const INPUT: [u8; 3] = [0xf0, 0xd0, 0x30];
+
+fn hex_to_rgb(color: u32) -> [u8; 3] {
+    [
+        ((color >> 16) & 0xFF) as u8,
+        ((color >> 8) & 0xFF) as u8,
+        (color & 0xFF) as u8,
+    ]
+}
+
+/// Builds the theme picker HUD as plain structured lines (span lists), each
+/// with its own color -- rendered by `renderer::TermRenderer` as a GPU text
+/// overlay instead of the old direct-to-stdout `println!` calls, which were
+/// invisible in a GUI app with no attached visible stdout terminal.
+pub fn build_lines(
+    registry: &ThemeRegistry,
+    is_creating: bool,
+    input_buffer: &str,
+) -> Vec<Vec<Span>> {
+    let mut lines = Vec::new();
+
+    lines.push(vec![Span::new("CYBERTERM THEME CONTROL MATRIX", ACCENT)]);
+    lines.push(vec![Span::new("", TEXT)]);
+
     let active_theme = if !registry.themes.is_empty() {
         Some(&registry.themes[registry.selected_index])
     } else {
         None
     };
 
-    let max_rows = 14;
-
-    for i in 0..max_rows {
-        // --- Left Sidebar: Theme List Matrix ---
-        let mut left_col = "                                       ".to_string();
-        
-        if i < registry.themes.len() {
-            let theme_item = &registry.themes[i];
-            if i == registry.selected_index {
-                // To keep the box border straight, format the string length FIRST, 
-                // and then wrap the final text block in neon cyan ANSI variables.
-                let padded_text = format!(" > {:<35}", theme_item.name);
-                left_col = format!("\x1B[96m{}\x1B[0m", padded_text);
-            } else {
-                left_col = format!("   {:<35}", theme_item.name);
-            }
-        } else if i == registry.themes.len() && !is_creating {
-            left_col = " [N] Create New Theme...               ".to_string();
-        } else if is_creating && i == registry.themes.len() {
-            // Apply high-voltage yellow color bytes outside the structural spacing loop
-            let padded_input = format!(" Enter Name: {:<23}", input_buffer);
-            left_col = format!("\x1B[93m{}\x1B[0m", padded_input);
+    for i in 0..registry.themes.len() {
+        let theme_item = &registry.themes[i];
+        if i == registry.selected_index {
+            lines.push(vec![Span::new(format!("> {}", theme_item.name), ACCENT)]);
+        } else {
+            lines.push(vec![Span::new(format!("  {}", theme_item.name), TEXT)]);
         }
-
-        // --- Right Pane: Live Contrast / Aesthetic Preview ---
-        let right_col = match i {
-            0  => "  LIVE PALETTE SYSTEM CHECK    ".to_string(),
-            1  => "  ─────────────────────────    ".to_string(),
-            3  => "  Normal: \x1B[30m█\x1B[31m█\x1B[32m█\x1B[33m█\x1B[34m█\x1B[35m█\x1B[36m█\x1B[37m█\x1B[0m      ".to_string(),
-            4  => "  Bright: \x1B[90m█\x1B[91m█\x1B[92m█\x1B[93m█\x1B[94m█\x1B[95m█\x1B[96m█\x1B[97m█\x1B[0m      ".to_string(),
-            6  => "  Active Color Tokens:         ".to_string(),
-            7  => {
-                if let Some(theme) = active_theme {
-                    format!("  Base BG:  \x1B[38;2;{};{};{}m██████\x1B[0m (#{:06X})", 
-                            (theme.colors[0] >> 16) & 0xFF, (theme.colors[0] >> 8) & 0xFF, theme.colors[0] & 0xFF, theme.colors[0])
-                } else {
-                    "  Base BG:  -- No Asset Data --".to_string()
-                }
-            }
-            8  => {
-                if let Some(theme) = active_theme {
-                    format!("  Accent 1: \x1B[38;2;{};{};{}m██████\x1B[0m (#{:06X})", 
-                            (theme.colors[1] >> 16) & 0xFF, (theme.colors[1] >> 8) & 0xFF, theme.colors[1] & 0xFF, theme.colors[1])
-                } else {
-                    "  Accent 1: -- No Asset Data --".to_string()
-                }
-            }
-            9  => {
-                if let Some(theme) = active_theme {
-                    format!("  Accent 2: \x1B[38;2;{};{};{}m██████\x1B[0m (#{:06X})", 
-                            (theme.colors[4] >> 16) & 0xFF, (theme.colors[4] >> 8) & 0xFF, theme.colors[4] & 0xFF, theme.colors[4])
-                } else {
-                    "  Accent 2: -- No Asset Data --".to_string()
-                }
-            }
-            _  => "                               ".to_string(),
-        };
-
-        // Notice we changed "│{} │ {}│" to "│ {} │ {} │" to compensate for length calculation updates
-        println!("│ {} │ {} │", left_col, right_col);
     }
 
-    println!("├──────────────────────────────────────────────┴───────────────────────────────┤");
-    println!("│ [▲/▼] Navigate  │ [Enter] Apply Profile  │ [N] New Theme  │ [Esc/Q] Exit UI │");
-    println!("└──────────────────────────────────────────────────────────────────────────────┘");
+    if is_creating {
+        lines.push(vec![
+            Span::new("Enter Name: ", TEXT),
+            Span::new(input_buffer.to_string(), INPUT),
+        ]);
+    } else {
+        lines.push(vec![Span::new("[N] Create New Theme...", DIM)]);
+    }
+
+    lines.push(vec![Span::new("", TEXT)]);
+    lines.push(vec![Span::new("Live Palette Preview", DIM)]);
+
+    if let Some(theme) = active_theme {
+        let mut normal_row = vec![Span::new("Normal: ", TEXT)];
+        for &c in &theme.colors[0..8] {
+            normal_row.push(Span::new("\u{2588}", hex_to_rgb(c)));
+        }
+        lines.push(normal_row);
+
+        let mut bright_row = vec![Span::new("Bright: ", TEXT)];
+        for &c in &theme.colors[8..16] {
+            bright_row.push(Span::new("\u{2588}", hex_to_rgb(c)));
+        }
+        lines.push(bright_row);
+    } else {
+        lines.push(vec![Span::new("-- No theme data --", DIM)]);
+    }
+
+    lines.push(vec![Span::new("", TEXT)]);
+    lines.push(vec![Span::new(
+        "[UP/DOWN] Navigate   [Enter] Apply   [N] New   [Esc] Close",
+        DIM,
+    )]);
+
+    lines
 }
