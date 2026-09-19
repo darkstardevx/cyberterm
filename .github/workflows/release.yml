@@ -23,10 +23,14 @@ jobs:
             os: ubuntu-latest
           - target: aarch64-unknown-linux-gnu
             os: ubuntu-24.04-arm
-          - target: x86_64-apple-darwin
-            os: macos-13
           - target: aarch64-apple-darwin
             os: macos-latest
+          # x86_64-apple-darwin (Intel Mac) dropped: macos-13 runner queue
+          # capacity has been badly degraded on GitHub's side (a job sat
+          # queued for over an hour, twice, while every other target in
+          # the same matrix finished in under a minute) and Apple hasn't
+          # sold an Intel Mac since 2023 -- aarch64-apple-darwin covers
+          # every Mac actually shipping today.
 
     steps:
       - name: Checkout

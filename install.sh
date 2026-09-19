@@ -3,10 +3,11 @@
 #
 #   curl -fsSL https://raw.githubusercontent.com/darkstardevx/cyberterm/main/install.sh | sh
 #
-# Supported: Linux (x86_64, aarch64) and macOS (x86_64, aarch64).
+# Supported: Linux (x86_64, aarch64) and macOS (aarch64 / Apple Silicon).
 # Linux needs the usual desktop GL/X11/Wayland libraries already present
 # (they ship with any desktop install) -- nothing extra to install for
-# this binary itself.
+# this binary itself. No Intel Mac build: GitHub's macos-13 runner queue
+# capacity is currently too degraded to build one reliably in CI.
 set -eu
 
 REPO="darkstardevx/cyberterm"
@@ -49,6 +50,10 @@ case "$arch" in
   arm64|aarch64) arch="aarch64" ;;
   *) die "unsupported architecture: $arch" ;;
 esac
+
+if [ "$platform" = "apple-darwin" ] && [ "$arch" = "x86_64" ]; then
+  die "no Intel Mac build available (GitHub's macos-13 runner queue is too degraded to build one reliably) -- build from source with 'cargo build --release' instead"
+fi
 
 target="${arch}-${platform}"
 archive="cyberterm-${target}.tar.gz"

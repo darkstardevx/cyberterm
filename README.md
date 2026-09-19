@@ -20,11 +20,13 @@ in-terminal theme menu — no Electron, no bundled shell.
 curl -fsSL https://raw.githubusercontent.com/darkstardevx/cyberterm/main/install.sh | sh
 ```
 
-Downloads the latest release for your platform (Linux or macOS, x86_64
-or aarch64), verifies its SHA-256 checksum, and installs `cyberterm` to
-`~/.local/bin`. Linux needs the usual desktop GL/X11/Wayland libraries
-already present — nothing extra to install for the binary itself. Or
-build from source with `cargo build --release`.
+Downloads the latest release for your platform (Linux x86_64/aarch64,
+or macOS aarch64/Apple Silicon), verifies its SHA-256 checksum, and
+installs `cyberterm` to `~/.local/bin`. Linux needs the usual desktop
+GL/X11/Wayland libraries already present — nothing extra to install for
+the binary itself. No Intel Mac build — GitHub's `macos-13` runner
+queue capacity has been too degraded to build one reliably in CI; build
+from source with `cargo build --release` there instead.
 
 ## 🚀 Commands
 
